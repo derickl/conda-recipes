@@ -1,0 +1,76 @@
+package:
+  name: awscli
+  version: !!str 1.6.10
+
+source:
+  fn: awscli-1.6.10.tar.gz
+  url: https://pypi.python.org/packages/source/a/awscli/awscli-1.6.10.tar.gz
+  md5: a6922fe71407f132d8d709f2842de71a
+  patches:
+   # List any patch files here
+    - build.patch
+
+# build:
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - awscli = awscli:main
+    #
+    # Would create an entry point called awscli that calls awscli.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - botocore >=0.80.0,<0.81.0
+    - bcdoc >=0.12.0,<0.13.0
+    - colorama >=0.2.5
+    - docutils >=0.10
+    - rsa >=3.1.2
+
+  run:
+    - python
+    - botocore >=0.80.0,<0.81.0
+    - bcdoc >=0.12.0,<0.13.0
+    - colorama >=0.2.5
+    - docutils >=0.10
+    - rsa >=3.1.2
+
+test:
+  # Python imports
+  imports:
+    - awscli
+    - awscli.customizations
+    - awscli.customizations.configservice
+    - awscli.customizations.datapipeline
+    - awscli.customizations.emr
+    - awscli.customizations.s3
+    - awscli.customizations.s3.syncstrategy
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://aws.amazon.com/cli/
+  license: Apache Software License
+  summary: 'Universal Command Line Environment for AWS.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
