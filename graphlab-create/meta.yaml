@@ -1,0 +1,105 @@
+package:
+  name: graphlab-create
+  version: !!str 1.2
+
+source:
+  fn: GraphLab-Create-1.2.tar.gz
+  url: https://pypi.python.org/packages/source/G/GraphLab-Create/GraphLab-Create-1.2.tar.gz
+  md5: 57b458bc45bdfb68807e1cac9c9823f6
+  patches:
+   # List any patch files here
+    - build.patch
+
+# build:
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - graphlab-create = graphlab-create:main
+    #
+    # Would create an entry point called graphlab-create that calls graphlab-create.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - boto >=2.33.0
+    - librato-metrics >=0.4.9
+    - mixpanel-py >=3.1.1
+    - decorator >=3.4.0
+    - tornado >=3.2.1
+    - prettytable >=0.7.2
+    - requests >=2.3.0
+    - awscli >=1.6.2
+
+  run:
+    - python
+    - boto >=2.33.0
+    - librato-metrics >=0.4.9
+    - mixpanel-py >=3.1.1
+    - decorator >=3.4.0
+    - tornado >=3.2.1
+    - prettytable >=0.7.2
+    - requests >=2.3.0
+    - awscli >=1.6.2
+
+test:
+  # Python imports
+  imports:
+    - graphlab
+    - graphlab.canvas
+    - graphlab.canvas.views
+    - graphlab.connect
+    - graphlab.connect.aws
+    - graphlab.cython
+    - graphlab.data_structures
+    - graphlab.deploy
+    - graphlab.deploy._predictive_service
+    - graphlab.deps
+    - graphlab.meta
+    - graphlab.meta.asttools
+    - graphlab.meta.asttools.mutators
+    - graphlab.meta.asttools.visitors
+    - graphlab.meta.bytecodetools
+    - graphlab.meta.decompiler
+    - graphlab.meta.scripts
+    - graphlab.toolkits
+    - graphlab.toolkits.classifier
+    - graphlab.toolkits.clustering
+    - graphlab.toolkits.deeplearning
+    - graphlab.toolkits.graph_analytics
+    - graphlab.toolkits.image_analysis
+    - graphlab.toolkits.nearest_neighbors
+    - graphlab.toolkits.recommender
+    - graphlab.toolkits.regression
+    - graphlab.toolkits.text_analytics
+    - graphlab.toolkits.topic_model
+    - graphlab_psutil
+    - graphlab_util
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://graphlab.com
+  license: LICENSE.txt
+  summary: 'GraphLab Create enables developers and data scientists to apply machine learning to build state of the art data products.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

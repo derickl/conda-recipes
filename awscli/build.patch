@@ -1,0 +1,16 @@
+diff --git a/setup.py b/setup.py
+index 1e2ba7b..83e3c1a 100644
+--- setup.py
++++ setup.py
+@@ -8,9 +8,9 @@ import awscli
+ 
+ requires = ['botocore>=0.80.0,<0.81.0',
+             'bcdoc>=0.12.0,<0.13.0',
+-            'colorama==0.2.5',
++            'colorama>=0.2.5',
+             'docutils>=0.10',
+-            'rsa==3.1.2']
++            'rsa>=3.1.2']
+ 
+ if sys.version_info[:2] == (2, 6):
+     # For python2.6 we have to require argparse since it
