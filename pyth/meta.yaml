@@ -1,0 +1,69 @@
+package:
+  name: pyth
+  version: !!str 0.6.0
+
+source:
+  fn: pyth-0.6.0.tar.gz
+  url: https://pypi.python.org/packages/source/p/pyth/pyth-0.6.0.tar.gz
+  md5: fb32af0943e2655ccc211ae58e9c0f61
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - pyth = pyth:main
+    #
+    # Would create an entry point called pyth that calls pyth.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - pyth
+    - pyth.encodings
+    - pyth.plugins
+    - pyth.plugins.latex
+    - pyth.plugins.pdf
+    - pyth.plugins.plaintext
+    - pyth.plugins.python
+    - pyth.plugins.rst
+    - pyth.plugins.rtf15
+    - pyth.plugins.xhtml
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://wiki.github.com/brendonh/pyth
+  license: MIT License
+  summary: 'Python text markup and conversion'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
