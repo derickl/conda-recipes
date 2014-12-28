@@ -1,23 +1,21 @@
-ls $PREFIX/mkspecs
-
 gsed -i 's/^\s*QWT_INSTALL_PREFIX\s*=\(.*\)$/QWT_INSTALL_PREFIX=$PREFIX/' qwtconfig.pri
 gsed -i 's/^\s*QWT_CONFIG\s*\+=\s*QwtDesigner$//' qwtconfig.pri
 
-export QMAKESPEC=$PREFIX/mkspecs/macx-g++
-qmake -set QT_INSTALL_PREFIX $PREFIX
+touch $PREFIX/bin/qt.conf
+echo '[Paths]' >> $PREFIX/bin/qt.conf
+echo 'Prefix = ../' >> $PREFIX/bin/qt.conf
 
 
-qmake -set QT_INSTALL_PREFIX $PREFIX
-qmake -set QT_INSTALL_DATA $PREFIX
-qmake -set QT_INSTALL_DOCS $PREFIX/doc
-qmake -set QT_INSTALL_HEADERS $PREFIX/include/Qt
-qmake -set QT_INSTALL_LIBS $PREFIX/lib
-qmake -set QT_INSTALL_BINS $PREFIX/bin
-qmake -set QT_INSTALL_PLUGINS $PREFIX/plugins
-qmake -set QT_INSTALL_IMPORTS $PREFIX/imports
-qmake -set QT_INSTALL_TRANSLATIONS $PREFIX/translations
+cp -R $PREFIX/mkspecs $PREFIX/bin
 
 
-qmake -config release
+qmake -query
+
+#export QMAKESPEC=$PREFIX/mkspecs/unsupported/macx-clang-libc++
+
+
+qmake -config release -spec macx-g++
+
 make
 make install
+
