@@ -6,8 +6,8 @@ source:
   fn: qwt-6.1.2.tar.bz2
   url: http://sourceforge.net/projects/qwt/files/qwt/6.1.2/qwt-6.1.2.tar.bz2/download
   md5: 9c88db1774fa7e3045af063bbde44d7d
-  #patches:
-    #- build.patch
+  patches:
+    - build.patch
 
 requirements:
   build:
