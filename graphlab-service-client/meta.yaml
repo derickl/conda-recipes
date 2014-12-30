@@ -1,0 +1,62 @@
+package:
+  name: graphlab-service-client
+  version: !!str 1.0.0
+
+source:
+  fn: GraphLab-Service-Client-1.0.0.tar.gz
+  url: https://pypi.python.org/packages/source/G/GraphLab-Service-Client/GraphLab-Service-Client-1.0.0.tar.gz
+  md5: 21c98cef6368fed1fb45f483733ebc8c
+  patches:
+   # List any patch files here
+   - build.patch
+
+# build:
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - graphlab-service-client = graphlab-service-client:main
+    #
+    # Would create an entry point called graphlab-service-client that calls graphlab-service-client.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - requests >=2.3.0
+
+  run:
+    - python
+    - requests >=2.3.0
+
+test:
+  # Python imports
+  imports:
+    - graphlab_service_client
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://graphlab.com
+  license: BSD License
+  summary: 'GraphLab Service Client makes it easy to make REST API calls to GraphLab Predictive Services'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
