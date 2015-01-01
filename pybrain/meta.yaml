@@ -1,0 +1,124 @@
+package:
+  name: pybrain
+  version: !!str 0.3
+
+source:
+  fn: PyBrain-0.3.tar.gz
+  url: https://pypi.python.org/packages/source/P/PyBrain/PyBrain-0.3.tar.gz
+  md5: 4115105890c2ee5c9755480d5bdf100b
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - pybrain = pybrain:main
+    #
+    # Would create an entry point called pybrain that calls pybrain.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - scipy
+    - matplotlib
+    - pyode
+
+  run:
+    - python
+    - scipy
+    - matplotlib
+    - pyode
+
+test:
+  # Python imports
+  imports:
+    - pybrain
+    - pybrain.auxiliary
+    - pybrain.datasets
+    - pybrain.optimization
+    - pybrain.optimization.distributionbased
+    - pybrain.optimization.finitedifference
+    - pybrain.optimization.memetic
+    - pybrain.optimization.populationbased
+    - pybrain.optimization.populationbased.coevolution
+    - pybrain.optimization.populationbased.multiobjective
+    - pybrain.rl
+    - pybrain.rl.agents
+    - pybrain.rl.environments
+    - pybrain.rl.environments.cartpole
+    #- pybrain.rl.environments.cartpole.fast_version
+    - pybrain.rl.environments.flexcube
+    - pybrain.rl.environments.functions
+    - pybrain.rl.environments.mazes
+    - pybrain.rl.environments.mazes.tasks
+    - pybrain.rl.environments.ode
+    - pybrain.rl.environments.ode.instances
+    - pybrain.rl.environments.ode.tasks
+    - pybrain.rl.environments.ode.tools
+    - pybrain.rl.environments.shipsteer
+    - pybrain.rl.environments.simple
+    - pybrain.rl.environments.simplerace
+    - pybrain.rl.environments.twoplayergames
+    - pybrain.rl.environments.twoplayergames.capturegameplayers
+    - pybrain.rl.environments.twoplayergames.gomokuplayers
+    - pybrain.rl.environments.twoplayergames.tasks
+    - pybrain.rl.experiments
+    - pybrain.rl.explorers
+    - pybrain.rl.explorers.continuous
+    - pybrain.rl.explorers.discrete
+    - pybrain.rl.learners
+    - pybrain.rl.learners.directsearch
+    - pybrain.rl.learners.meta
+    - pybrain.rl.learners.valuebased
+    - pybrain.structure
+    - pybrain.structure.connections
+    - pybrain.structure.evolvables
+    - pybrain.structure.modules
+    - pybrain.structure.networks
+    - pybrain.structure.networks.custom
+    - pybrain.supervised
+    - pybrain.supervised.evolino
+    - pybrain.supervised.knn
+    - pybrain.supervised.knn.lsh
+    - pybrain.supervised.trainers
+    - pybrain.tests
+    - pybrain.tests.unittests
+    - pybrain.tools
+    - pybrain.tools.datasets
+    - pybrain.tools.mixtures
+    - pybrain.tools.networking
+    - pybrain.tools.plotting
+    - pybrain.tools.xml
+    - pybrain.unsupervised
+    - pybrain.unsupervised.trainers
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://pybrain.org
+  license: BSD License
+  summary: 'PyBrain is the swiss army knife for neural networking.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

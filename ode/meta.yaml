@@ -1,0 +1,15 @@
+package:
+  name: ode
+  version: !!str 0.13
+
+source:
+  fn: ode-0.13.tar.bz2
+  url: https://downloads.sourceforge.net/project/opende/ODE/0.13/ode-0.13.tar.bz2
+  sha1: 0279d58cc390ff5cc048f2baf96cff23887f3838
+
+build:
+  number: 1
+about:
+  home: http://www.ode.org/
+  license: BSD
+

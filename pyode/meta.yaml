@@ -1,0 +1,62 @@
+package:
+  name: pyode
+  version: !!str 1.2.1
+
+source:
+  fn: PyODE-1.2.1.tar.gz
+  url: https://pypi.python.org/packages/source/P/PyODE/PyODE-1.2.1.tar.gz
+  md5: 02015056f80121c4730178e8198c19c8
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - pyode = pyode:main
+    #
+    # Would create an entry point called pyode that calls pyode.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - ode
+
+  run:
+    - python
+    - ode
+
+test:
+  # Python imports
+  imports:
+    - ode
+    - xode
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://pyode.sourceforge.net/
+  license: BSD License or GNU Lesser General Public License v2 or later (LGPLv2+)
+  summary: 'Python wrapper for the Open Dynamics Engine'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
