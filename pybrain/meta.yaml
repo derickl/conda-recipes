@@ -1,11 +1,11 @@
 package:
   name: pybrain
-  version: !!str 0.3
+  version: !!str 0.3.2
 
 source:
-  fn: PyBrain-0.3.tar.gz
-  url: https://pypi.python.org/packages/source/P/PyBrain/PyBrain-0.3.tar.gz
-  md5: 4115105890c2ee5c9755480d5bdf100b
+  fn: PyBrain-0.3.2.tar.gz
+  url: https://github.com/pybrain/pybrain/archive/0.3.2.tar.gz
+  md5: 6f78e17d3d0b2256d9fefedb3e7a0c1c
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -29,12 +29,14 @@ requirements:
   build:
     - python
     - setuptools
+    - numpy
     - scipy
     - matplotlib
     - pyode
 
   run:
     - python
+    - numpy
     - scipy
     - matplotlib
     - pyode
@@ -98,7 +100,6 @@ test:
     - pybrain.tools.mixtures
     - pybrain.tools.networking
     - pybrain.tools.plotting
-    - pybrain.tools.xml
     - pybrain.unsupervised
     - pybrain.unsupervised.trainers
 
