@@ -1,0 +1,26 @@
+package:
+    name: pygame
+    version: !!str 1.9.1
+
+source:
+    fn: pygame-1.9.1release.tar.gz
+    url: http://pygame.org/ftp/pygame-1.9.1release.tar.gz 
+    md5: 1c4cdc708d17c8250a2d78ef997222fc
+    patches:
+      - build.patch                                     
+
+build:
+    number: 0
+
+requirements:
+    build:
+        - python
+
+    run:
+        - python
+test:
+    imports:
+        - pygame
+
+about:
+    home: http://pygame.org/

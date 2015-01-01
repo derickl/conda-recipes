@@ -1,0 +1,29 @@
+
+package:
+    name: wordcloud
+    version: !!str 1.0
+
+source:
+    git_url: https://github.com/amueller/word_cloud                                         
+
+build:
+    number: 0
+
+requirements:
+    build:
+        - python
+        - cython
+        - image
+        - numpy
+
+    run:
+        - python
+        - cython
+        - image
+        - numpy
+test:
+    imports:
+        - wordcloud
+
+about:
+    home: https://github.com/amueller/word_cloud
