@@ -5,10 +5,10 @@ package:
 source:
   fn: milk-0.5.3.tar.gz
   url: https://pypi.python.org/packages/source/m/milk/milk-0.5.3.tar.gz
-  md5: e0b7db663b29f050fb47bb49eb8d7411
-#  patches:
+  md5: 54a14d9b28b05196f8988ebdf1ef5c16
+  patches:
    # List any patch files here
-   # - fix.patch
+    - build.patch
 
 build:
   # entry_points:

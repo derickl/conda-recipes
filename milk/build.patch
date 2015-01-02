@@ -1,0 +1,16 @@
+diff --git setup.py setup.py
+index 911eeac..4b75ca3 100644
+--- setup.py
++++ setup.py
+@@ -57,9 +57,10 @@ _extensions = {
+         'milk.supervised._lasso' : ['milk/supervised/_lasso.cpp'],
+ }
+ 
+-compiler_args = ['-std=c++0x']
++compiler_args = ['-std=c++11']
+ if platform.system() == 'Darwin':
+   compiler_args.append('-stdlib=libc++')
++  compiler_args.append('-mmacosx-version-min=10.7')
+ 
+ ext_modules = [
+     Extension(key,
