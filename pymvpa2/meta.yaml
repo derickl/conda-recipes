@@ -1,0 +1,96 @@
+package:
+  name: pymvpa2
+  version: !!str 2.3.1
+
+source:
+  fn: pymvpa2-2.3.1.tar.gz
+  url: https://pypi.python.org/packages/source/p/pymvpa2/pymvpa2-2.3.1.tar.gz
+  md5: 32ce44d013e8d1f8cea53c53054a23e7
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - pymvpa2 = pymvpa2:main
+    #
+    # Would create an entry point called pymvpa2 that calls pymvpa2.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - numpy
+    - scipy
+
+  run:
+    - python
+    - numpy
+    - scipy
+
+test:
+  # Python imports
+  imports:
+    - mvpa2
+    - mvpa2.algorithms
+    - mvpa2.atlases
+    - mvpa2.base
+    - mvpa2.clfs
+    - mvpa2.clfs.libsmlrc
+    - mvpa2.clfs.libsvmc
+    - mvpa2.clfs.sg
+    - mvpa2.clfs.skl
+    - mvpa2.cmdline
+    - mvpa2.datasets
+    - mvpa2.datasets.sources
+    - mvpa2.featsel
+    - mvpa2.generators
+    - mvpa2.kernels
+    - mvpa2.mappers
+    - mvpa2.mappers.glm
+    - mvpa2.measures
+    - mvpa2.misc
+    - mvpa2.misc.bv
+    - mvpa2.misc.fsl
+    - mvpa2.misc.io
+    - mvpa2.misc.plot
+    - mvpa2.misc.surfing
+    - mvpa2.sandbox
+    - mvpa2.support
+    - mvpa2.support.afni
+    - mvpa2.support.bayes
+    - mvpa2.support.ipython
+    - mvpa2.support.nibabel
+    - mvpa2.support.nipy
+    - mvpa2.support.scipy
+    - mvpa2.testing
+    - mvpa2.viz
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://www.pymvpa.org
+  license: MIT License
+  summary: 'Multivariate pattern analysis'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
