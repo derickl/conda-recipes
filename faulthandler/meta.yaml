@@ -1,11 +1,11 @@
 package:
   name: faulthandler
-  version: 2.3
+  version: 2.4
 
 source:
-  fn: faulthandler-2.3.tar.gz
-  url: https://pypi.python.org/packages/source/f/faulthandler/faulthandler-2.3.tar.gz
-  md5: 76d1344adc2302cf5c59a5f8a4f4f4ae
+  fn: faulthandler-2.4.tar.gz
+  url: https://pypi.python.org/packages/source/f/faulthandler/faulthandler-2.4.tar.gz
+  md5: 110960933b0902334e8804eb4ea20750
 #  patches:
    # List any patch files here
    # - fix.patch
