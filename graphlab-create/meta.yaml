@@ -1,11 +1,11 @@
 package:
   name: graphlab-create
-  version: !!str 1.2
+  version: !!str 1.2.1
 
 source:
-  fn: GraphLab-Create-1.2.tar.gz
-  url: https://pypi.python.org/packages/source/G/GraphLab-Create/GraphLab-Create-1.2.tar.gz
-  md5: 57b458bc45bdfb68807e1cac9c9823f6
+  fn: GraphLab-Create-1.2.1.tar.gz
+  url: https://pypi.python.org/packages/source/G/GraphLab-Create/GraphLab-Create-1.2.1.tar.gz
+  md5: 41efcc93177a227f9fa05caefd49ee87
   patches:
    # List any patch files here
     - build.patch
