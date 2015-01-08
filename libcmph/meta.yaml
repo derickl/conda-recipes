@@ -1,0 +1,15 @@
+package:
+  name: libcmph
+  version: !!str 2.0
+
+source:
+  fn: cmph-2.0.tar.gz
+  url: https://downloads.sourceforge.net/project/cmph/cmph/cmph-2.0.tar.gz
+  md5: 020946deef7418d9daf4195556ecac12
+
+build:
+  number: 1        [unix]
+
+about:
+  home: http://cmph.sourceforge.net
+  license: Open Source

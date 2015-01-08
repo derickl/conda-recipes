@@ -1,0 +1,18 @@
+diff --git conf/gen.settings.sh conf/gen.settings.sh
+index 49a97ad..27b898b 100755
+--- conf/gen.settings.sh
++++ conf/gen.settings.sh
+@@ -23,8 +23,10 @@ DISCO_PORT = 8989
+ # DISCO_PROXY_ENABLED = "on"
+ # DISCO_HTTPD = "/usr/sbin/varnishd -a 0.0.0.0:\$DISCO_PROXY_PORT -f \$DISCO_PROXY_CONFIG -P \$DISCO_PROXY_PID -n/tmp -smalloc"
+ 
+-DDFS_TAG_MIN_REPLICAS = 3
+-DDFS_TAG_REPLICAS     = 3
+-DDFS_BLOB_REPLICAS    = 3
++DDFS_TAG_MIN_REPLICAS = 1
++DDFS_TAG_REPLICAS     = 1
++DDFS_BLOB_REPLICAS    = 1
++
++DISCO_MASTER_HOST     = "localhost"
+ 
+ EOF

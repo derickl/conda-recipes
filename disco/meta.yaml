@@ -1,21 +1,29 @@
 package:
   name: disco
-  version: 0.4.4
+  version: 0.5.4
 
 source:
   git_url: git@github.com:discoproject/disco.git
-  git_tag: 0.4.4
+  git_tag: 0.5.4
   patches:
-    - prefix_erl.patch
-    - no_listdir.patch
+    - build.patch
 
 requirements:
   build:
     - python
     - erlang
+    - simplejson
+    - libcmph
+    
   run:
     - python
     - erlang
+    - simplejson
+    - libcmph
+    
+test:
+  imports:
+    - disco
 
 about:
   home: http://discoproject.org/
