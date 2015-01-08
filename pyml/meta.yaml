@@ -1,0 +1,44 @@
+package:
+  name: pyml
+  version: !!str 0.7.13.3
+
+source:
+  fn: PyML-0.7.13.3.tar.gz
+  url: http://downloads.sourceforge.net/project/pyml/PyML-0.7.13.3.tar.gz
+  md5: a6bca1f192d6338234e5ba4f6fd6d5d8
+
+requirements:
+  build:
+    - python
+    - numpy
+
+  run:
+    - python
+    - numpy
+
+test:
+  # Python imports
+  imports:
+   - PyML
+   - PyML.base
+   - PyML.containers
+   - PyML.containers.ext
+   - PyML.classifiers
+   - PyML.classifiers.ext
+   - PyML.classifiers.liblinear
+   - PyML.clusterers
+   - PyML.clusterers.ext
+   - PyML.evaluators
+   - PyML.preproc
+   - PyML.feature_selection
+   - PyML.datagen
+   - PyML.demo
+   - PyML.utils
+   - PyML.utils.ext
+   
+about:
+  home: http://pyml.sourceforge.net/
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
