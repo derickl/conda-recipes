@@ -1,0 +1,17 @@
+diff --git python/liblinear.py python/liblinear.py
+index 9587718..5c27535 100644
+--- python/liblinear.py
++++ python/liblinear.py
+@@ -2,9 +2,11 @@
+ 
+ from ctypes import *
+ from ctypes.util import find_library
+-from os import path
++from os import path, environ
+ import sys
+ 
++environ["DYLD_FALLBACK_LIBRARY_PATH"] = path.abspath(path.abspath(__file__) + "/../../../")
++
+ __all__ = ['liblinear', 'feature_node', 'gen_feature_nodearray', 'problem',
+            'parameter', 'model', 'toPyModel', 'L2R_LR', 'L2R_L2LOSS_SVC_DUAL',
+            'L2R_L2LOSS_SVC', 'L2R_L1LOSS_SVC_DUAL', 'MCSVM_CS', 

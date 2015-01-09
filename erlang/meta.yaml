@@ -7,13 +7,18 @@ source:
   md5: eccd1e6dda6132993555e088005019f2
   url: http://www.erlang.org/download/otp_src_R15B03-1.tar.gz
 
+build:
+  number: 1
+    
 requirements:
   build:
     - readline
     - openssl
+    - unixodbc
   run:
     - readline
     - openssl
+    - unixodbc
 
 about:
   home: http://www.erlang.org/

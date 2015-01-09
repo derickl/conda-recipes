@@ -1,0 +1,27 @@
+package:
+  name: liblinear
+  version: !!str 1.96
+
+source:
+  fn: liblinear-1.96.tar.gz
+  sha1: 54de76b5e37cc3f200857e7a4cee0da21f0eefbc
+  url: http://www.csie.ntu.edu.tw/~cjlin/liblinear/liblinear-1.96.tar.gz
+  patches:
+    - build.patch
+    - patch-Makefile.diff
+    
+build:
+  number : 1
+  
+requirements:
+  build:
+    - python
+    
+test:
+  imports:
+    - liblinear
+    - liblinearutil
+
+
+about:
+  home: http://www.csie.ntu.edu.tw/~cjlin/liblinear/

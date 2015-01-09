@@ -1,0 +1,17 @@
+diff --git python/svm.py python/svm.py
+index e1a4923..23b7040 100644
+--- python/svm.py
++++ python/svm.py
+@@ -2,9 +2,11 @@
+ 
+ from ctypes import *
+ from ctypes.util import find_library
+-from os import path
++from os import path, environ
+ import sys
+ 
++environ["DYLD_FALLBACK_LIBRARY_PATH"] = path.abspath(path.abspath(__file__) + "/../../../")
++
+ __all__ = ['libsvm', 'svm_problem', 'svm_parameter',
+            'toPyModel', 'gen_svm_nodearray', 'print_null', 'svm_node', 'C_SVC',
+            'EPSILON_SVR', 'LINEAR', 'NU_SVC', 'NU_SVR', 'ONE_CLASS',

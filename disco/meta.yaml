@@ -7,6 +7,9 @@ source:
   git_tag: 0.5.4
   patches:
     - build.patch
+    
+build:
+  number: 1
 
 requirements:
   build:

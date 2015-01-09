@@ -9,7 +9,8 @@
     --enable-dynamic-ssl-lib \
     --enable-shared-zlib \
     --enable-smp-support \
-    --enable-darwin-64bit
+    --enable-darwin-64bit \
+    --disable-wx
     
 make
 make install
