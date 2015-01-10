@@ -1,14 +1,15 @@
 # Tested on Mac OS X 10.9 using clang compiler provided by XCode
 package:
     name: opencv
-    version: 2.4.9
+    version: 2.4.10
 
 source:
-    fn: opencv-2.4.9.zip
-    url: http://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.9/opencv-2.4.9.zip
+    fn: opencv-2.4.10.zip
+    url: http://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.10/opencv-2.4.10.zip
+    sha1: 0b185f5e332d5feef91722a6ed68c36a6d33909e
 
 build:
-    number: 0
+    number: 1
 
 requirements:
     build:
@@ -18,12 +19,18 @@ requirements:
         - zlib
         - libpng
         - python
+        - ffmpeg
+        - eigen3
+        - tbb
     run:
         - python
         - numpy
         - jpeg
         - zlib
         - libpng
+        - ffmpeg
+        - eigen3
+        - tbb
 test:
     imports:
       - cv2

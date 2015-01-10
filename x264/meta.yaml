@@ -1,11 +1,11 @@
 
 package:
     name: x264
-    version: 20131217
+    version: 20141218
 
 source:
-    fn: x264-snapshot-20131217-2245-stable.tar.bz2
-    url: http://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20131217-2245-stable.tar.bz2
+    fn: x264-snapshot-20141218-2245-stable.tar.bz2
+    url: http://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20141218-2245-stable.tar.bz2
 
 build:
     number: 1
@@ -13,11 +13,6 @@ build:
 requirements:
     build:
       - yasm
-
-test:
-    imports:
-
-    commands:
 
 about:
     home: http://www.videolan.org/

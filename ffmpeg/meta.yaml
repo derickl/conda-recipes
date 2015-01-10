@@ -1,11 +1,10 @@
-
 package:
     name: ffmpeg
-    version: 2.2.4
+    version: 2.5.3
 
 source:
-    git_url: git://source.ffmpeg.org/ffmpeg.git
-    git_tag: n2.2.4
+    fn: ffmpeg-2.5.3.tar.bz2
+    url: http://ffmpeg.org/releases/ffmpeg-2.5.3.tar.bz2
 
 build:
     number: 0
