@@ -10,10 +10,8 @@ source:
    # List any patch files here
    # - fix.patch
 
-build:
-  rpaths:
-    - lib/R/lib/
-    - lib/
+# build:
+  # preserve_egg_dir: True
   # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
@@ -30,16 +28,14 @@ build:
 requirements:
   build:
     - python
-    - r
     - setuptools
-    - argparse # [py26]
-    - singledispatch # [not py34]
+    - singledispatch
+    - ipython
 
   run:
     - python
-    - r
-    - argparse # [py26]
-    - singledispatch # [not py34]
+    - singledispatch
+    - ipython
 
 test:
   # Python imports
@@ -58,19 +54,17 @@ test:
     - rpy2.robjects.lib.tests
     - rpy2.robjects.tests
 
-  commands:
+  # commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
-    - python -m rpy2.tests
+
 
   # You can also put a file called run_test.py in the recipe that will be run
   # at test time.
 
-  requires:
+  # requires:
     # Put any additional test requirements here.  For example
-    - ipython
-    - r-survival
-    - numpy
+    # - nose
 
 about:
   home: http://rpy.sourceforge.net
