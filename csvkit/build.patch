@@ -1,0 +1,13 @@
+diff --git setup.py setup.py
+index 037295c..7fe48b2 100644
+--- setup.py
++++ setup.py
+@@ -8,7 +8,7 @@ install_requires = [
+     'python-dateutil>=1.5',
+     'sqlalchemy>=0.6.6',
+     'openpyxl>=1.5.7',
+-    'dbf==0.94.003']
++    'dbf>=0.94.003']
+ 
+ if sys.version_info < (2, 7):
+     install_requires.append('argparse>=1.2.1')
