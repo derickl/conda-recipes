@@ -1,0 +1,14 @@
+package:
+  name: igraph
+  version: 0.7.1
+
+source:
+  fn: igraph-0.7.1.tar.gz
+  url: http://igraph.org/nightly/get/c/igraph-0.7.1.tar.gz
+  sha1: a14845d0d2bf7677792b3e38fb0d63e79868a889
+
+build:
+  number: 3      [unix]
+
+about:
+  home: http://igraph.org

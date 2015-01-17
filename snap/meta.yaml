@@ -1,0 +1,46 @@
+package:
+  name: snap
+  version: 1.1
+
+source:
+  fn: snap-1.1-2.3-macosx10.7.5-x64-py2.7.tar
+  url: http://snap.stanford.edu/snappy/release/snap-1.1-2.3-macosx10.7.5-x64-py2.7.tar.gz
+  md5: 508bedd96d564af2eb3fb4585e4e4fe0
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python
+
+test:
+  imports:
+    - snap
+   
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home:  http://snap.stanford.edu
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
