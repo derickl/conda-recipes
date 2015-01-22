@@ -1,24 +1,24 @@
 package:
-  name: python-levenshtein
-  version: !!str 0.12.0
+  name: pyopencl
+  version: !!str 2014.1
 
 source:
-  fn: python-Levenshtein-0.12.0.tar.gz
-  url: https://pypi.python.org/packages/source/p/python-Levenshtein/python-Levenshtein-0.12.0.tar.gz
-  md5: e8cde197d6d304bbdc3adae66fec99fb
+  fn: pyopencl-2014.1.tar.gz
+  url: https://pypi.python.org/packages/source/p/pyopencl/pyopencl-2014.1.tar.gz
+  md5: f89d26676aaff01312116caea114f06c
 #  patches:
    # List any patch files here
    # - fix.patch
 
-build:
-  preserve_egg_dir: True
-  #entry_points:
+# build:
+  # preserve_egg_dir: True
+  # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - python-levenshtein = python-levenshtein:main
+    # - pyopencl = pyopencl:main
     #
-    # Would create an entry point called python-levenshtein that calls python-levenshtein.main()
+    # Would create an entry point called pyopencl that calls pyopencl.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -29,17 +29,28 @@ requirements:
   build:
     - python
     - setuptools
+    - pytools >=2014.2
+    - pytest >=2
+    - decorator >=3.2.0
+    - mako
+    - numpy
 
   run:
     - python
-    - setuptools
+    - pytools >=2014.2
+    - pytest >=2
+    - decorator >=3.2.0
+    - mako
+    - numpy
 
 test:
   # Python imports
   imports:
-    - Levenshtein
+    - pyopencl
+    - pyopencl.characterize
+    - pyopencl.compyte
 
-  #commands:
+  # commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
 
@@ -52,9 +63,9 @@ test:
     # - nose
 
 about:
-  home: http://github.com/ztane/python-Levenshtein
-  license: GNU General Public License v2 or later (GPLv2+)
-  summary: 'Python extension for computing string edit distances and similarities.'
+  home: http://mathema.tician.de/software/pyopencl
+  license: MIT License
+  summary: 'Python wrapper for OpenCL'
 
 # See
 # http://docs.continuum.io/conda/build.html for

@@ -1,12 +1,12 @@
 
 package:
     name: pytools
-    version: 2013.5.7
+    version: 2014.3.5
 
 source:
-    fn: pytools-2013.5.7.tar.gz
-    url: https://pypi.python.org/packages/source/p/pytools/pytools-2013.5.7.tar.gz
-    md5: 8954a655749d646d456335b93aad3caf
+    fn: pytools-2014.3.5.tar.gz
+    url: https://pypi.python.org/packages/source/p/pytools/pytools-2014.3.5.tar.gz
+    md5: 7f8e9d6a88090a601e96a9ee095d3512
 
 build:
     number: 0
@@ -16,10 +16,14 @@ requirements:
         - python
         - distribute
         - decorator
+        - six
+        - appdirs
 
     run:
         - python
         - decorator
+        - six
+        - appdirs
 
 test:
     imports:

@@ -1,11 +1,11 @@
 package:
   name: sh
-  version: 1.09
+  version: 1.11
 
 source:
-  fn: sh-1.09.tar.gz
-  url: https://pypi.python.org/packages/source/s/sh/sh-1.09.tar.gz
-  md5: b68a2f91de880dce042d4f03ec9e0f47
+  fn: sh-1.11.tar.gz
+  url: https://pypi.python.org/packages/source/s/sh/sh-1.11.tar.gz
+  md5: 7af8df6c92d29ff927b6db0146bddec3
 #  patches:
    # List any patch files here
    # - fix.patch

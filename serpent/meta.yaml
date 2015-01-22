@@ -1,24 +1,24 @@
 package:
-  name: python-levenshtein
-  version: !!str 0.12.0
+  name: serpent
+  version: !!str 1.8
 
 source:
-  fn: python-Levenshtein-0.12.0.tar.gz
-  url: https://pypi.python.org/packages/source/p/python-Levenshtein/python-Levenshtein-0.12.0.tar.gz
-  md5: e8cde197d6d304bbdc3adae66fec99fb
+  fn: serpent-1.8.tar.gz
+  url: https://pypi.python.org/packages/source/s/serpent/serpent-1.8.tar.gz
+  md5: 663245ce100176b267dfbe8ebe47bcc1
 #  patches:
    # List any patch files here
    # - fix.patch
 
-build:
-  preserve_egg_dir: True
-  #entry_points:
+# build:
+  # preserve_egg_dir: True
+  # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - python-levenshtein = python-levenshtein:main
+    # - serpent = serpent:main
     #
-    # Would create an entry point called python-levenshtein that calls python-levenshtein.main()
+    # Would create an entry point called serpent that calls serpent.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -32,14 +32,13 @@ requirements:
 
   run:
     - python
-    - setuptools
 
 test:
   # Python imports
   imports:
-    - Levenshtein
+    - serpent
 
-  #commands:
+  # commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
 
@@ -52,9 +51,9 @@ test:
     # - nose
 
 about:
-  home: http://github.com/ztane/python-Levenshtein
-  license: GNU General Public License v2 or later (GPLv2+)
-  summary: 'Python extension for computing string edit distances and similarities.'
+  #home: The package home page
+  license: MIT License
+  summary: 'Serialization based on ast.literal_eval'
 
 # See
 # http://docs.continuum.io/conda/build.html for

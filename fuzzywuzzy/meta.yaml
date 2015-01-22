@@ -1,0 +1,50 @@
+package:
+  name: fuzzywuzzy
+  version: !!str 0.4.0
+
+source:
+  fn: fuzzywuzzy-0.4.0.tar.gz
+  url: https://pypi.python.org/packages/source/f/fuzzywuzzy/fuzzywuzzy-0.4.0.tar.gz
+  md5: e0ad357679be06b10409fd4e1e40426e
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+   number: 1
+   
+requirements:
+  build:
+    - python
+    - setuptools
+    - python-levenshtein
+
+  run:
+    - python
+    - python-levenshtein
+
+test:
+  # Python imports
+  imports:
+    - fuzzywuzzy
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/seatgeek/fuzzywuzzy
+  license: Open SOurce
+  summary: 'Fuzzy string matching in python'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
