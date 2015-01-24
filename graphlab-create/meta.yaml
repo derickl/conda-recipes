@@ -10,7 +10,7 @@ source:
    # List any patch files here
     - build.patch
 
-# build:
+build:
   # preserve_egg_dir: True
   # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
@@ -23,7 +23,11 @@ source:
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
+  
+  rpaths:
+    - lib/
+    - lib/python2.7/site-packages/graphlab/cython
 
 requirements:
   build:
@@ -40,6 +44,7 @@ requirements:
 
   run:
     - python
+    - setuptools
     - boto >=2.33.0
     - librato-metrics >=0.4.9
     - mixpanel-py >=3.1.1
@@ -48,6 +53,8 @@ requirements:
     - prettytable >=0.7.2
     - requests >=2.3.0
     - awscli >=1.6.2
+    
+  
 
 test:
   # Python imports
