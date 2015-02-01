@@ -1,0 +1,33 @@
+package:
+  name: hiscore
+  version: !!str 1.1.0
+
+source:
+  fn: hiscore-1.1.0.tar.gz
+  url: https://pypi.python.org/packages/source/h/hiscore/hiscore-1.1.0.tar.gz
+  md5: 8ab67f3542fdfb0d28465e98d914ae5a
+
+requirements:
+  build:
+    - python
+    - numpy >=1.8
+    - cvxpy
+
+  run:
+    - python
+    - numpy >=1.8
+    - cvxpy
+
+test:
+  # Python imports
+  imports:
+    - hiscore
+ 
+about:
+  home: http://github.com/aothman/hiscore
+  license: GNU Affero General Public License v3
+  summary: 'A simple and powerful engine for creating scores.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
