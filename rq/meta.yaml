@@ -1,48 +1,32 @@
 package:
   name: rq
-  version: 0.3.8
+  version: 0.5.0
 
 source:
-  fn: rq-0.3.8.tar.gz
-  url: https://pypi.python.org/packages/source/r/rq/rq-0.3.8.tar.gz
-  md5: 4b532ac25e23c2f13cda462f66c0b178
+  fn: rq-0.5.0.tar.gz
+  url: https://pypi.python.org/packages/source/r/rq/rq-0.5.0.tar.gz
+  md5: e5781f06f049276b132b3428e5693ee3
 #  patches:
    # List any patch files here
    # - fix.patch
 
 build:
-  entry_points:
-    # Put any entry points (scripts to be generated automatically) here. The
-    # syntax is module:function.  For example
-    #
-    - rqworker = rq.scripts.rqworker:main
-    - rqinfo = rq.scripts.rqinfo:main
-    #
-    # Would call rq.main()
-
-  # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
   number: 1
 
 requirements:
   build:
     - python
-
-    # requirements.
-    #
     - setuptools
     - redis-py
-    - times
-    - importlib [py26]
-    - argparse  [py26]
+    - click
+    
 
   run:
     - python
+    - setuptools
     - redis-py
-    - times
-    - importlib [py26]
-    - argparse  [py26]
-
+    - click
+    
 test:
   # Python imports
   imports:
