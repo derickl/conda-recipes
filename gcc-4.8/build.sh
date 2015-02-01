@@ -1,5 +1,10 @@
+if [ "$(uname)" == "Darwin" ]; then
+    export LDFLAGS="-headerpad_max_install_names"
+fi
+
 ./configure \
     --prefix=$PREFIX \
+    --libdir=$PREFIX/lib \
     --with-gmp=$PREFIX \
     --with-mpfr=$PREFIX \
     --with-mpc=$PREFIX \
@@ -9,5 +14,3 @@
 
 make
 make install
-
-mv $PREFIX/lib64/* $PREFIX/lib/
