@@ -1,0 +1,74 @@
+package:
+  name: kartograph
+  version: !!str 0.6.8
+
+source:
+  fn: kartograph.py-0.6.8.tar.gz
+  url: https://codeload.github.com/kartograph/kartograph.py/tar.gz/0.6.8
+  md5: e01fcd2c4dde4fefbb3e3d6612bedcfc
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - boto = boto:main
+    #
+    # Would create an entry point called boto that calls boto.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - gdal
+    - shapely
+    - pyshp
+    - pyyaml
+    - pykml
+    - pyproj
+    - lxml
+    - ordereddict
+    - tinycss
+
+  run:
+    - python
+    - gdal
+    - shapely
+    - pyshp
+    - pyyaml
+    - pykml
+    - pyproj
+    - lxml
+    - ordereddict
+    - tinycss
+
+test:
+  imports:
+    - kartograph
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://kartograph.org/
+  license: AGPL
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

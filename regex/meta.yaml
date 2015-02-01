@@ -1,11 +1,11 @@
 package:
   name: regex
-  version: 2013.12.31
+  version: 2014.12.24
 
 source:
-  fn: regex-2013-12-31.tar.gz
-  url: https://pypi.python.org/packages/source/r/regex/regex-2013-12-31.tar.gz
-  md5: 1d8311d0df721174bec826cf7d6596d8
+  fn: regex-2014-12-24.tar.gz
+  url: https://pypi.python.org/packages/source/r/regex/regex-2014.12.24.tar.gz
+  md5: f7897fed0c7cee3fca3445222f829d8f
 
 requirements:
   build:
