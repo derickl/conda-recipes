@@ -1,0 +1,29 @@
+package:
+  name: pydelicious
+  version: !!str 0.6
+
+source:
+  fn:  pydelicious-0.6.zip
+  url: https://pydelicious.googlecode.com/files/pydelicious-0.6.zip
+  sha1: bbbf934b13e2388f498d1eebd1e3d69914354084
+
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - pydelicious
+ 
+about:
+  home: https://code.google.com/p/pydelicious
+  license: OpenSource
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
