@@ -1,11 +1,11 @@
 package:
   name: futures
-  version: 2.1.4
+  version: 2.2.0
 
 source:
-  fn: futures-2.1.4.tar.gz
-  url: https://pypi.python.org/packages/source/f/futures/futures-2.1.4.tar.gz
-  md5: c6116d2d8c3c1a7c386ce196a2c98a4d
+  fn: futures-2.2.0.tar.gz
+  url: https://pypi.python.org/packages/source/f/futures/futures-2.2.0.tar.gz
+  md5: 310e446de8609ddb59d0886e35edb534
 #  patches:
    # List any patch files here
    # - fix.patch
