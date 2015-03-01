@@ -1,15 +1,13 @@
 package:
   name: rpy2
-  version: !!str 2.5.4
+  version: !!str 2.5.6
 
 source:
-  fn: rpy2-2.5.4.tar.gz
-  url: https://pypi.python.org/packages/source/r/rpy2/rpy2-2.5.4.tar.gz
-  md5: 115a20ac30883f096da2bdfcab55196d
-#  patches:
-   # List any patch files here
-   # - fix.patch
+  fn: rpy2-2.5.6.tar.gz
+  url: https://pypi.python.org/packages/source/r/rpy2/rpy2-2.5.6.tar.gz
+  md5: a36e758b633ce6aec6a5f450bfee980f
 
+<<<<<<< HEAD
 # build:
   # preserve_egg_dir: True
   # entry_points:
@@ -24,6 +22,12 @@ source:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
   # number: 1
+=======
+build:
+  rpaths:
+    - lib/R/lib/
+    - lib/
+>>>>>>> 6d195e29be1bb6ebdcbe952bee928023cabdeab2
 
 requirements:
   build:
@@ -54,6 +58,7 @@ test:
     - rpy2.robjects.lib.tests
     - rpy2.robjects.tests
 
+<<<<<<< HEAD
   # commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
@@ -65,12 +70,17 @@ test:
   # requires:
     # Put any additional test requirements here.  For example
     # - nose
+=======
+  commands:
+    - python -m rpy2.tests
+
+  requires:
+    - ipython
+    - r-survival
+    - numpy
+>>>>>>> 6d195e29be1bb6ebdcbe952bee928023cabdeab2
 
 about:
   home: http://rpy.sourceforge.net
   license: GNU General Public License v2 or later (GPLv2+)
   summary: 'Python interface to the R language (embedded R)'
-
-# See
-# http://docs.continuum.io/conda/build.html for
-# more information about meta.yaml

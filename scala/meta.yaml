@@ -1,11 +1,11 @@
 
 package:
     name: scala
-    version: 2.11.1
+    version: 2.11.5
 
 source:
-    fn: scala-2.11.1.tgz
-    url: http://downloads.typesafe.com/scala/2.11.1/scala-2.11.1.tgz
+    fn: scala-2.11.5.tgz
+    url: http://downloads.typesafe.com/scala/2.11.5/scala-2.11.5.tgz
 
 build:
     number: 0

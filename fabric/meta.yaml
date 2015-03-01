@@ -1,11 +1,11 @@
 package:
   name: fabric
-  version: 1.8.0
+  version: !!str 1.10.1
 
 source:
-  fn: Fabric-1.8.0.tar.gz
-  url: https://pypi.python.org/packages/source/F/Fabric/Fabric-1.8.0.tar.gz
-  md5: 1f195d16b05877767816617749d33eca
+  fn: Fabric-1.10.1.tar.gz
+  url: https://pypi.python.org/packages/source/F/Fabric/Fabric-1.10.1.tar.gz
+  md5: 596ad28296a264cedef021494bd40cd5
 #  patches:
    # List any patch files here
    # - fix.patch
