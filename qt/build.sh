@@ -1,5 +1,8 @@
 #!/bin/bash
 
+BIN=$PREFIX/bin
+QTCONF=$BIN/qt.conf
+
 if [ `uname` == Linux ]; then
     chmod +x configure
 
@@ -15,10 +18,10 @@ if [ `uname` == Linux ]; then
     CFLAGS="-march=${MARCH}" CXXFLAGS="-march=${MARCH}" \
     CPPFLAGS="-march=${MARCH}" LDFLAGS="-march=${MARCH}" \
     ./configure \
-        -release -fast -no-qt3support \
-        -nomake examples -nomake demos -nomake docs \
-        -webkit -qt-libpng -qt-zlib -gtkstyle -dbus -openssl \
-        -L $LIBRARY_PATH -I $INCLUDE_PATH -prefix $PREFIX
+        -release -fast -prefix $PREFIX \
+        -no-qt3support -nomake examples -nomake demos -nomake docs \
+        -opensource -verbose -openssl -webkit -gtkstyle -dbus \
+        -qt-libpng -qt-zlib -L $LIBRARY_PATH -I $INCLUDE_PATH
 
     # Build on RPM based distros fails without setting LD_LIBRARY_PATH
     # to the build lib dir
@@ -45,32 +48,23 @@ if [ `uname` == Darwin ]; then
 
     chmod +x configure
     ./configure \
-        -platform macx-g++ -release -prefix $PREFIX \
+        -release -fast -prefix $PREFIX -platform macx-g++ \
         -no-qt3support -nomake examples -nomake demos -nomake docs \
-        -opensource -no-framework -fast -verbose -openssl \
-        -L $LIBRARY_PATH -I $INCLUDE_PATH -arch `uname -m`
+        -opensource -verbose -openssl -no-framework \
+        -arch `uname -m` -L $LIBRARY_PATH -I $INCLUDE_PATH
 
     make -j $(sysctl -n hw.ncpu)
     make install
-
-    # cd $PREFIX
-    # for fn in lconvert lrelease lupdate macdeployqt moc qmake rcc uic
-    # do
-    #     cp /usr/bin/$fn $PREFIX/bin
-    # done
-    #
-    # for x in QtCore QtDBus QtDeclarative QtGui QtMultimedia QtNetwork \
-    #     QtOpenGL QtScript QtSql QtSvg QtWebKit QtXml QtXmlPatterns phonon
-    # do
-    #     cd $PREFIX/include
-    #     cp -r /Library/Frameworks/$x.framework/Versions/4/Headers $x
-    #
-    #     cd $PREFIX/lib
-    #     fn=lib$x.4.8.5.dylib
-    #     cp /Library/Frameworks/$x.framework/Versions/4/$x $fn
-    #     chmod +x $fn
-    #     ln -s $fn lib$x.4.8.dylib
-    #     ln -s $fn lib$x.4.dylib
-    #     ln -s $fn lib$x.dylib
-    # done
 fi
+
+# Make sure $BIN exists
+if [ ! -d $BIN ]; then
+  mkdir $BIN
+fi
+
+# Add qt.conf file to the package to make it fully relocatable
+cat <<EOF >$QTCONF
+[Paths]
+Prefix = $PREFIX
+
+EOF
