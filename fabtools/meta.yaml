@@ -1,11 +1,11 @@
 package:
   name: fabtools
-  version: 0.14.0
+  version: 0.19.0
 
 source:
-  fn: fabtools-0.14.0.tar.gz
-  url: https://pypi.python.org/packages/source/f/fabtools/fabtools-0.14.0.tar.gz
-  md5: ce84712260e96070439e1627ef39cae3
+  fn: fabtools-0.19.0.tar.gz
+  url: https://pypi.python.org/packages/source/f/fabtools/fabtools-0.19.0.tar.gz
+  md5: 38b0b60e8402cfde37b89785dfc87ddf
 #  patches:
    # List any patch files here
    # - fix.patch

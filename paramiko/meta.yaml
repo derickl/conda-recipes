@@ -1,11 +1,11 @@
 package:
   name: paramiko
-  version: 1.12.0
+  version: 1.15.2
 
 source:
-  fn: paramiko-1.12.0.tar.gz
-  url: https://pypi.python.org/packages/source/p/paramiko/paramiko-1.12.0.tar.gz
-  md5: 4187f77b1a5a313c899993930e30c321
+  fn: paramiko-1.15.2.tar.gz
+  url: https://pypi.python.org/packages/source/p/paramiko/paramiko-1.15.2.tar.gz
+  md5: 6bbfb328fe816c3d3652ba6528cc8b4c
 #  patches:
    # List any patch files here
    # - fix.patch

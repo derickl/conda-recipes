@@ -1,11 +1,11 @@
 package:
   name: ecdsa
-  version: 0.10
+  version: 0.13
 
 source:
-  fn: ecdsa-0.10.tar.gz
-  url: https://pypi.python.org/packages/source/e/ecdsa/ecdsa-0.10.tar.gz
-  md5: e95941b3bcbf1726472bb724d7478551
+  fn: ecdsa-0.13.tar.gz
+  url: https://pypi.python.org/packages/source/e/ecdsa/ecdsa-0.13.tar.gz
+  md5: 1f60eda9cb5c46722856db41a3ae6670
 #  patches:
    # List any patch files here
    # - fix.patch
