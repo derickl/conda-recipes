@@ -1,11 +1,11 @@
 package:
-  name: cachecontrol
-  version: "0.11.2"
+  name: spoofmac
+  version: !!str 2.0.4
 
 source:
-  fn: CacheControl-0.11.2.tar.gz
-  url: https://pypi.python.org/packages/source/C/CacheControl/CacheControl-0.11.2.tar.gz
-  md5: 7e54c099f42b8291206e1ba3f20e94bf
+  fn: SpoofMAC-2.0.4.tar.gz
+  url: https://pypi.python.org/packages/source/S/SpoofMAC/SpoofMAC-2.0.4.tar.gz
+  md5: 8700da0490a61964ed0e613fcdf3db35
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -16,9 +16,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - cachecontrol = cachecontrol:main
+    # - spoofmac = spoofmac:main
     #
-    # Would create an entry point called cachecontrol that calls cachecontrol.main()
+    # Would create an entry point called spoofmac that calls spoofmac.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -29,18 +29,16 @@ requirements:
   build:
     - python
     - setuptools
-    - requests
+    - docopt
 
   run:
     - python
-    - requests
-    - lockfile
+    - docopt
 
 test:
   # Python imports
   imports:
-    - cachecontrol
-    - cachecontrol.caches
+    - spoofmac
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -55,9 +53,9 @@ test:
     # - nose
 
 about:
-  home: https://github.com/ionrock/cachecontrol
-  license: MIT License
-  summary: 'httplib2 caching for requests'
+  home: http://feross.org/spoofmac/
+  license: MIT
+  summary: '\nEasily spoof your MAC address in OS X, Windows & Linux.\n'
 
 # See
 # http://docs.continuum.io/conda/build.html for
