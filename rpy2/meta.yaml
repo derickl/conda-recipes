@@ -77,6 +77,7 @@ test:
   requires:
     - ipython
     - r-survival
+    - r-ggplot2
     - numpy
 >>>>>>> 6d195e29be1bb6ebdcbe952bee928023cabdeab2
 
