@@ -1,11 +1,11 @@
 package:
   name: word2vec
-  version: !!str 0.6.7
+  version: !!str 0.7.1
 
 source:
-  fn: word2vec-0.6.7.tar.gz
-  url: https://pypi.python.org/packages/source/w/word2vec/word2vec-0.6.7.tar.gz
-  md5: f44bf1ebd1f6adcad7635dd178686c47
+  fn: word2vec-0.7.1.tar.gz
+  url: https://pypi.python.org/packages/source/w/word2vec/word2vec-0.7.1.tar.gz
+  md5: 5bae296ecc5fcd481fe588c630f246e3
 #  patches:
    # List any patch files here
    # - fix.patch
