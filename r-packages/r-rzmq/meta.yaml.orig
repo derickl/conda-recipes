@@ -21,10 +21,13 @@ source:
    # List any patch files here
    # - fix.patch
 
+  patches: # [win]
+    - remove_assert.patch # [win]
+
 build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 1 # [win32]
+  # number: 1
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -34,7 +37,12 @@ build:
 requirements:
   build:
     - r
+<<<<<<< HEAD
     - zeromq # [not win]
+=======
+    - zeromq
+    - patch
+>>>>>>> 7c0ad4e00961293ac7e7e10e70b3841ad4ef1477
 
   run:
     - r
