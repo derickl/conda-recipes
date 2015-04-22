@@ -1,0 +1,27 @@
+package:
+  name: mlpy
+  version: !!str 3.5.0
+
+source:
+  fn: mlpy-3.5.0.tar.gz
+  url: http://downloads.sourceforge.net/project/mlpy/mlpy%203.5.0/mlpy-3.5.0.tar.gz
+
+requirements:
+  build:
+    - gsl
+    - numpy
+    - scipy
+  run:
+    - python
+    - numpy
+    - gsl
+    - numpy
+    - scipy
+
+test:
+    imports:
+      - mlpy
+
+about:
+  home: http://mlpy.sourceforge.net
+  license: GPLv3

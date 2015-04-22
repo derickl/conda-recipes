@@ -10,9 +10,6 @@ build:
   number: 2 # [osx]
   number: 1 # [linux]
 
-requirements:
-  build:
-    - gcc
 
 about:
   home: http://www.gnu.org/software/gsl/
