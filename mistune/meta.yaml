@@ -1,33 +1,24 @@
 package:
-  name: click
-<<<<<<< HEAD
-  version: !!str 3.3
+  name: mistune
+  version: !!str 0.4
 
 source:
-  fn: click-3.3.tar.gz
-  url: https://pypi.python.org/packages/source/c/click/click-3.3.tar.gz
-  md5: 40edaba4d216915a8326c5b2cb52781d
-=======
-  version: "4.0"
-
-source:
-  fn: click-4.0.tar.gz
-  url: https://pypi.python.org/packages/source/c/click/click-4.0.tar.gz
-  md5: 79b475a1dbd566d8ce7daba5e6c1aaa7
->>>>>>> 3dba6060d439b6802aa2c698bc698b077e99727a
+  fn: mistune-0.4.tar.gz
+  url: https://pypi.python.org/packages/source/m/mistune/mistune-0.4.tar.gz
+  md5: bee1d80e51cfb4e17660b99233dbc850
 #  patches:
    # List any patch files here
    # - fix.patch
 
 # build:
-  # preserve_egg_dir: True
-  # entry_points:
+  #preserve_egg_dir: True
+  #entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - click = click:main
+    # - mistune = mistune:main
     #
-    # Would create an entry point called click that calls click.main()
+    # Would create an entry point called mistune that calls mistune.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -45,9 +36,9 @@ requirements:
 test:
   # Python imports
   imports:
-    - click
+    - mistune
 
-  # commands:
+  #commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
 
@@ -60,9 +51,9 @@ test:
     # - nose
 
 about:
-  home: http://github.com/mitsuhiko/click
-  license: BSD License
-  summary: 'A simple wrapper around optparse for powerful command line utilities.'
+  home: https://github.com/lepture/mistune
+  license:  BSD License
+  summary: 'The fastest markdown parser in pure Python'
 
 # See
 # http://docs.continuum.io/conda/build.html for

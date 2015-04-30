@@ -1,33 +1,24 @@
 package:
-  name: click
-<<<<<<< HEAD
-  version: !!str 3.3
+  name: trackpy
+  version: 0.2.4rc7
 
 source:
-  fn: click-3.3.tar.gz
-  url: https://pypi.python.org/packages/source/c/click/click-3.3.tar.gz
-  md5: 40edaba4d216915a8326c5b2cb52781d
-=======
-  version: "4.0"
-
-source:
-  fn: click-4.0.tar.gz
-  url: https://pypi.python.org/packages/source/c/click/click-4.0.tar.gz
-  md5: 79b475a1dbd566d8ce7daba5e6c1aaa7
->>>>>>> 3dba6060d439b6802aa2c698bc698b077e99727a
+  fn: trackpy-0.2.4rc7.tar.gz
+  url: https://pypi.python.org/packages/source/t/trackpy/trackpy-0.2.4rc7.tar.gz
+  md5: 10cc6969af5856b25da3fbe9ed179b38
 #  patches:
    # List any patch files here
    # - fix.patch
 
 # build:
-  # preserve_egg_dir: True
-  # entry_points:
+  #preserve_egg_dir: True
+  #entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - click = click:main
+    # - trackpy = trackpy:main
     #
-    # Would create an entry point called click that calls click.main()
+    # Would create an entry point called trackpy that calls trackpy.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -38,16 +29,34 @@ requirements:
   build:
     - python
     - setuptools
+    - six
+    - pyyaml
+    - numpy
+    - pandas
+    - scipy
+    - pims
+    - matplotlib
 
   run:
     - python
+    - six
+    - pyyaml
+    - numpy
+    - pandas
+    - scipy >=0.12.0
+    - matplotlib
+    - pims
+    - pyyaml
+    - numba 0.12.2
 
 test:
   # Python imports
   imports:
-    - click
+    - tifffile
+    - pims
+    - trackpy
 
-  # commands:
+  #commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
 
@@ -60,9 +69,9 @@ test:
     # - nose
 
 about:
-  home: http://github.com/mitsuhiko/click
-  license: BSD License
-  summary: 'A simple wrapper around optparse for powerful command line utilities.'
+  home: http://trackpy.readthedocs.org
+  license: 3-clause BSD License
+  summary: 'Python particle-tracking toolkit'
 
 # See
 # http://docs.continuum.io/conda/build.html for

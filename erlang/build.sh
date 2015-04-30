@@ -10,7 +10,11 @@
     --enable-shared-zlib \
     --enable-smp-support \
     --enable-darwin-64bit \
-    --disable-wx
+    --disable-wx \
+    --enable-native-libs \
+    --disable-debug \
+    --disable-silent-rules \
+    --disable-hipe
     
 make
 make install

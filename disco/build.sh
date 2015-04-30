@@ -1,7 +1,8 @@
 #!/bin/bash
+export CFLAGS="-I$PREFIX/include $CFLAGS" 
+export LDFLAGS="-L$PREFIX/lib $LDFLAGS"
 
-git submodule init
-git submodule update
+git init && git add master/rebar && git commit -a -m 'dummy commit'
 
 gsed -i "s:sysconfdir    = /etc:sysconfdir = $PREFIX/etc:g" Makefile
 gsed -i "s:prefix        = /usr:prefix = $PREFIX:g" Makefile
@@ -11,6 +12,26 @@ make install
 gsed -i "s:/etc/disco/:$PREFIX/etc/disco/:g" \
     $PREFIX/lib/python2.7/site-packages/disco/settings.py
     
-cd contrib/discodb
+mkdir -p $PREFIX/libexec/bin
+gsed -i "s:/usr/bin/env python:$PREFIX/bin/python:g" $PREFIX/bin/disco
+gsed -i "s:/usr/bin/env python:$PREFIX/bin/python:g" $PREFIX/bin/ddfs
 
-$PYTHON setup.py install --prefix=$PREFIX
+
+mv $PREFIX/bin/disco $PREFIX/libexec/bin
+mv $PREFIX/bin/ddfs $PREFIX/libexec/bin
+
+touch $PREFIX/bin/disco 
+chmod +x $PREFIX/bin/disco 
+touch $PREFIX/bin/ddfs
+chmod +x $PREFIX/bin/ddfs
+
+echo "#!/bin/bash" >> $PREFIX/bin/disco
+echo "#!/bin/bash" >> $PREFIX/bin/ddfs
+
+
+echo "PYTHONPATH=\"$PREFIX/lib/python$PY_VER/site-packages\" exec \"$PREFIX/libexec/bin/disco\" \"\$@\"" >> $PREFIX/bin/disco
+echo "PYTHONPATH=\"$PREFIX/lib/python$PY_VER/site-packages\" exec \"$PREFIX/libexec/bin/ddfs\" \"\$@\"" >> $PREFIX/bin/ddfs
+
+#cd contrib/discodb
+
+#$PYTHON setup.py install --prefix=$PREFIX

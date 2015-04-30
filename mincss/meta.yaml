@@ -1,20 +1,11 @@
 package:
-  name: click
-<<<<<<< HEAD
-  version: !!str 3.3
+  name: mincss
+  version: !!str 0.8.1
 
 source:
-  fn: click-3.3.tar.gz
-  url: https://pypi.python.org/packages/source/c/click/click-3.3.tar.gz
-  md5: 40edaba4d216915a8326c5b2cb52781d
-=======
-  version: "4.0"
-
-source:
-  fn: click-4.0.tar.gz
-  url: https://pypi.python.org/packages/source/c/click/click-4.0.tar.gz
-  md5: 79b475a1dbd566d8ce7daba5e6c1aaa7
->>>>>>> 3dba6060d439b6802aa2c698bc698b077e99727a
+  fn: mincss-0.8.1.tar.gz
+  url: https://pypi.python.org/packages/source/m/mincss/mincss-0.8.1.tar.gz
+  md5: 2917e8fe30d7cf80cc9b8353e2f2c3eb
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -25,9 +16,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - click = click:main
+    # - mincss = mincss:main
     #
-    # Would create an entry point called click that calls click.main()
+    # Would create an entry point called mincss that calls mincss.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -38,14 +29,18 @@ requirements:
   build:
     - python
     - setuptools
+    - lxml
+    - cssselect
 
   run:
     - python
+    - lxml
+    - cssselect
 
 test:
   # Python imports
   imports:
-    - click
+    - mincss
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -60,9 +55,9 @@ test:
     # - nose
 
 about:
-  home: http://github.com/mitsuhiko/click
+  home: http://github.com/peterbe/mincss
   license: BSD License
-  summary: 'A simple wrapper around optparse for powerful command line utilities.'
+  summary: 'clears the junk out of your CSS'
 
 # See
 # http://docs.continuum.io/conda/build.html for

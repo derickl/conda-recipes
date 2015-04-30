@@ -1,53 +1,56 @@
 package:
-  name: click
-<<<<<<< HEAD
-  version: !!str 3.3
+  name: pims
+  version: 0.2.2
 
 source:
-  fn: click-3.3.tar.gz
-  url: https://pypi.python.org/packages/source/c/click/click-3.3.tar.gz
-  md5: 40edaba4d216915a8326c5b2cb52781d
-=======
-  version: "4.0"
-
-source:
-  fn: click-4.0.tar.gz
-  url: https://pypi.python.org/packages/source/c/click/click-4.0.tar.gz
-  md5: 79b475a1dbd566d8ce7daba5e6c1aaa7
->>>>>>> 3dba6060d439b6802aa2c698bc698b077e99727a
+  fn: pims-0.2.2.tar.gz
+  url: https://pypi.python.org/packages/source/P/PIMS/PIMS-0.2.2.tar.gz
+  md5: ef7d935221df418b2b68b5c5fc721e50
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
-  # preserve_egg_dir: True
-  # entry_points:
+build:
+  #preserve_egg_dir: True
+  #entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - click = click:main
+    # - pims = pims:main
     #
-    # Would create an entry point called click that calls click.main()
+    # Would create an entry point called pims that calls pims.main()
 
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
   # number: 1
 
+  binary_relocation: true
+
+
 requirements:
   build:
     - python
     - setuptools
+    - six
+    - numpy
+    - scikit-image  # one of { scikit-image | matplotlib | scipy }
+    - tifffile
 
   run:
     - python
+    - six >=1.8
+    - numpy >=1.7
+    - scikit-image  # one of { scikit-image | matplotlib | scipy }
+    - tifffile >=0.3.1
+    - pillow  # optional, but necessary for ipython rich display
 
 test:
   # Python imports
   imports:
-    - click
+    - pims
 
-  # commands:
+  #commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
 
@@ -60,9 +63,9 @@ test:
     # - nose
 
 about:
-  home: http://github.com/mitsuhiko/click
-  license: BSD License
-  summary: 'A simple wrapper around optparse for powerful command line utilities.'
+  home: https://github.com/soft-matter/pims
+  license: 3-clause BSD License
+  summary: 'Python particle-tracking toolkit'
 
 # See
 # http://docs.continuum.io/conda/build.html for
