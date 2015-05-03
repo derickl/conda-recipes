@@ -1,23 +1,30 @@
 package:
   name: xlwings
-  version: 0.1.0
+  version: !!str 0.3.5
 
 source:
-  fn: xlwings-0.1.1.zip
-  url: https://github.com/ZoomerAnalytics/xlwings/archive/v0.1.0.zip
+  fn: xlwings-0.3.5.tar.gz
+  url: https://pypi.python.org/packages/source/x/xlwings/xlwings-0.3.5.tar.gz
+  md5: 8ea2d1f7a0a1a0d05032754a625cf480
 
 requirements:
   build:
     - python
-    - pywin32
+    - pywin32 # [win]
+    - psutil # [osx]
+    - appscript # [osx]
+    - pandas
 
   run:
     - python
-    - pywin32
+    - pywin32 # [win]
+    - psutil # [osx]
+    - appscript # [osx]
+    - pandas
 
-#test:
-#  imports:
-#   - xlwings
+test:
+  imports:
+   - xlwings
 
 about:
   home: http://xlwings.org

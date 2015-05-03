@@ -1,48 +1,44 @@
 package:
-  name: urllib3
-  version: 1.10.4
+  name: pybars3
+  version: "0.9.1"
 
 source:
-  fn: urllib3-1.10.4.tar.gz
-  url: https://pypi.python.org/packages/source/u/urllib3/urllib3-1.10.4.tar.gz
-  md5: 517e6c293e1d144ff3e67486d69249c6
+  fn: pybars3-0.9.1.tar.gz
+  url: https://pypi.python.org/packages/source/p/pybars3/pybars3-0.9.1.tar.gz
+  md5: 38ef2da87fa70af7d8a8a9908b732cee
 #  patches:
    # List any patch files here
    # - fix.patch
 
-build:
+# build:
+  # preserve_egg_dir: True
   # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - urllib3 = urllib3:main
+    # - pybars3 = pybars3:main
     #
-    # Would create an entry point called urllib3 that calls urllib3.main()
+    # Would create an entry point called pybars3 that calls pybars3.main()
 
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 3
+  # number: 1
 
 requirements:
   build:
     - python
-    - setuptools
+    - pymeta3 >=0.5.1
 
   run:
     - python
-    - ndg-httpsclient
-    - pyopenssl
-    - pyasn1
+    - pymeta3 >=0.5.1
 
 test:
   # Python imports
   imports:
-    - urllib3.packages.ssl_match_hostname
-    - urllib3.contrib
-    - urllib3.packages
-    - urllib3
-    - urllib3.contrib.pyopenssl
+    - pybars
+    - pybars._templates
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -57,8 +53,9 @@ test:
     # - nose
 
 about:
-  home: http://urllib3.readthedocs.org/
-  license: MIT License
+  home: https://github.com/wbond/pybars3
+  license: GNU Library or Lesser General Public License (LGPL)
+  summary: 'Handlebars.js templating for Python 3 and 2'
 
 # See
 # http://docs.continuum.io/conda/build.html for

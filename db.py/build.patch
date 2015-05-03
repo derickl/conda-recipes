@@ -1,0 +1,13 @@
+diff --git db/tests/tests.py db/tests/tests.py
+index a86f9c2..5b99570 100644
+--- db/tests/tests.py
++++ db/tests/tests.py
+@@ -98,7 +98,7 @@ class PandaSQLTest(unittest.TestCase):
+ 
+     def test_table_count_rows(self):
+         count = self.db.tables.Invoice.count
+-        self.assertEqual(count), 412)
++        self.assertEqual(count, 412)
+ 
+ if __name__ == "__main__":
+     unittest.main()

@@ -1,0 +1,29 @@
+package:
+  name: pymeta3
+  version: "0.5.1"
+
+source:
+  fn: PyMeta3-0.5.1.tar.gz
+  url: https://pypi.python.org/packages/source/P/PyMeta3/PyMeta3-0.5.1.tar.gz
+  md5: 58f02ad5e4835a33ebbfa3d655238015
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - pymeta
+
+about:
+  home: https://github.com/wbond/pymeta3
+  license: MIT License
+  summary: 'Pattern-matching language based on OMeta for Python 3 and 2'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
