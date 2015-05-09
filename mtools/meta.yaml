@@ -1,0 +1,93 @@
+package:
+  name: mtools
+  version: "1.1.8"
+
+source:
+  fn: mtools-1.1.8.tar.gz
+  url: https://pypi.python.org/packages/source/m/mtools/mtools-1.1.8.tar.gz
+  md5: 0c4f463b86cd44a365fda94aa74da1de
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # preserve_egg_dir: True
+  entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - mtools = mtools:main
+    #
+    # Would create an entry point called mtools that calls mtools.main()
+
+    - mgenerate=mtools.mgenerate.mgenerate:main
+    - mlaunch=mtools.mlaunch.mlaunch:main
+    - mlogfilter=mtools.mlogfilter.mlogfilter:main
+    - mloginfo=mtools.mloginfo.mloginfo:main
+    - mlogvis=mtools.mlogvis.mlogvis:main
+    - mplotqueries=mtools.mplotqueries.mplotqueries:main
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - psutil >=2.0
+    - python-dateutil
+    - pymongo
+    - matplotlib
+    - numpy
+
+  run:
+    - python
+    - psutil >=2.0
+    - python-dateutil
+    - pymongo
+    - matplotlib
+    - numpy
+
+test:
+  # Python imports
+  imports:
+    - mtools
+    - mtools.mgenerate
+    - mtools.mgenerate.operators
+    - mtools.mlaunch
+    - mtools.mlogfilter
+    - mtools.mlogfilter.filters
+    - mtools.mloginfo
+    - mtools.mloginfo.sections
+    - mtools.mlogvis
+    - mtools.mplotqueries
+    - mtools.mplotqueries.plottypes
+    - mtools.util
+
+  commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+    - mgenerate --help
+    - mlaunch --help
+    - mlogfilter --help
+    - mloginfo --help
+    - mlogvis --help
+    - mplotqueries --help
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rueckstiess/mtools
+  license: UNKNOWN
+  summary: 'Useful scripts to parse and visualize MongoDB log files, launch test environments and reproduce issues.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

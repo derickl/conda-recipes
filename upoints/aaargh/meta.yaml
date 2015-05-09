@@ -1,60 +1,47 @@
 package:
-  name: rodeo
-  version: "0.2.2"
+  name: aaargh
+  version: "0.7.1"
 
 source:
-  fn: rodeo-0.2.2.tar.gz
-  url: https://pypi.python.org/packages/source/r/rodeo/rodeo-0.2.2.tar.gz
-  md5: b5e5e1877e68c2d435de655567548580
+  fn: aaargh-0.7.1.tar.gz
+  url: https://pypi.python.org/packages/source/a/aaargh/aaargh-0.7.1.tar.gz
+  md5: b9c3b0d47c78c05e72767784fd54f3b9
 #  patches:
    # List any patch files here
    # - fix.patch
 
-build:
+# build:
   # preserve_egg_dir: True
-  entry_points:
+  # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - rodeo = rodeo:main
+    # - aaargh = aaargh:main
     #
-    # Would create an entry point called rodeo that calls rodeo.main()
+    # Would create an entry point called aaargh that calls aaargh.main()
 
-    - rodeo = rodeo.cli:cmd
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 1
+  # number: 1
 
 requirements:
   build:
     - python
     - setuptools
-    - ipython >=3.0.0
-    - flask >=0.10.1
-    - jedi
-    - docopt
-    - pyzmq >=13
 
   run:
     - python
-    - ipython >=3.0.0
-    - flask >=0.10.1
-    - jedi
-    - docopt
-    - pyzmq >=13
-    - pip
 
 test:
   # Python imports
   imports:
-    - rodeo
+    - aaargh
 
-  commands:
+  # commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
 
-    - rodeo --help
 
   # You can also put a file called run_test.py in the recipe that will be run
   # at test time.
@@ -64,14 +51,10 @@ test:
     # - nose
 
 about:
-  home: https://github.com/yhat/rodeo/
-  license: BSD
-  summary: 'an ide for data analysis in python'
+  home: https://github.com/wbolster/aaargh
+  license: BSD License
+  summary: 'An astonishingly awesome application argument helper'
 
 # See
 # http://docs.continuum.io/conda/build.html for
 # more information about meta.yaml
-
-app:
-  entry: rodeo .
-  summary: "Rodeo is an IDE that's built expressly for doing data science in Python."
