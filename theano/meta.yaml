@@ -6,10 +6,6 @@ source:
   fn: Theano-0.7.0.tar.gz
   url: https://pypi.python.org/packages/source/T/Theano/Theano-0.7.0.tar.gz
   md5: 099a9575801b71252b5bbbc3c34ed45a
-<<<<<<< HEAD
-  
-=======
->>>>>>> 9e53383c97afa9454bf4ae59cf7891224e8bdfca
 
 requirements:
   build:
