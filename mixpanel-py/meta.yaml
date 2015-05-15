@@ -1,11 +1,11 @@
 package:
   name: mixpanel-py
-  version: !!str 3.2.0
+  version: !!str 4.0.2
 
 source:
-  fn: mixpanel-py-3.2.0.tar.gz
-  url: https://pypi.python.org/packages/source/m/mixpanel-py/mixpanel-py-3.2.0.tar.gz
-  md5: ea85b27a3b426a69e2587ad7f663610b
+  fn: mixpanel-py-4.0.2.tar.gz
+  url: https://pypi.python.org/packages/source/m/mixpanel-py/mixpanel-py-4.0.2.tar.gz
+  md5: a26a221fd6a6e62aa9c88e68712acecf
 #  patches:
    # List any patch files here
    # - fix.patch

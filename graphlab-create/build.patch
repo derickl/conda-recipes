@@ -1,8 +1,8 @@
 diff --git setup.py setup.py
-index cf554f2..2db5e49 100644
+index 0584bf7..c49c250 100644
 --- setup.py
 +++ setup.py
-@@ -228,14 +228,14 @@ if __name__ == '__main__':
+@@ -197,19 +197,19 @@ if __name__ == '__main__':
              "Topic :: Scientific/Engineering :: Information Analysis",
          ],
          install_requires=[
@@ -10,19 +10,29 @@ index cf554f2..2db5e49 100644
 -            "librato-metrics == 0.4.9",
 -            "mixpanel-py == 3.1.1",
 -            "decorator == 3.4.0",
--            "tornado == 3.2.1",
+-            "tornado == 4.1",
 -            "prettytable == 0.7.2",
 -            "requests == 2.3.0",
 -            "awscli == 1.6.2",
--            "lockfile == 0.10.2"
+-            "flask-cors==1.10.3",
+-            "httpretty==0.8.3",
+-            "Flask==0.10.1",
+-            "Flask-Cors==1.10.3",
+-            "Flask-RESTful==0.3.0",
+-            "sseclient==0.0.8",
 +            "boto >= 2.33.0",
 +            "librato-metrics >= 0.4.9",
 +            "mixpanel-py >= 3.1.1",
 +            "decorator >= 3.4.0",
-+            "tornado >= 3.2.1",
++            "tornado >= 4.1",
 +            "prettytable >= 0.7.2",
 +            "requests >= 2.3.0",
 +            "awscli >= 1.6.2",
-+            "lockfile >= 0.10.2"
++            "flask-cors>=1.10.3",
++            "httpretty>=0.8.3",
++            "Flask>=0.10.1",
++            "Flask-Cors>=1.10.3",
++            "Flask-RESTful>=0.3.0",
++            "sseclient>=0.0.8",
          ],
      )

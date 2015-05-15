@@ -1,11 +1,11 @@
 package:
   name: boto
-  version: 2.32.0
+  version: 2.38.0
 
 source:
-  fn: boto-2.32.0.tar.gz
-  url: https://pypi.python.org/packages/source/b/boto/boto-2.32.0.tar.gz
-  md5: 8fd30cd04e7c47e67486e2a7ede29ae5
+  fn: boto-2.38.0.tar.gz
+  url: https://pypi.python.org/packages/source/b/boto/boto-2.38.0.tar.gz
+  md5: 28112f29e9c7b10e12b6917a325e70ce
 #  patches:
    # List any patch files here
    # - fix.patch

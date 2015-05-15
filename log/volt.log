@@ -1,0 +1,6 @@
+2015-05-10 05:10:02,917   FATAL [main] HOST: You must specify a startup action, either create, recover, rejoin, or compile.
+2015-05-10 05:10:02,918   INFO  [main] HOST: Usage: voltdb create  catalog <catalog.jar> [host <hostname>] [deployment <deployment.xml>]
+       voltdb recover [host <hostname>] [deployment <deployment.xml>]
+       voltdb rejoin host <hostname>
+       voltdb compile [<option> ...] [<ddl-file> ...]  (run voltdb compile -h for more details)
+
