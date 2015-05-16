@@ -1,11 +1,11 @@
 package:
   name: graphlab-service-client
-  version: !!str 1.0.0
+  version: !!str 1.3.0
 
 source:
-  fn: GraphLab-Service-Client-1.0.0.tar.gz
-  url: https://pypi.python.org/packages/source/G/GraphLab-Service-Client/GraphLab-Service-Client-1.0.0.tar.gz
-  md5: 21c98cef6368fed1fb45f483733ebc8c
+  fn: GraphLab-Service-Client-1.3.0.tar.gz
+  url: https://pypi.python.org/packages/source/G/GraphLab-Service-Client/GraphLab-Service-Client-1.3.0.tar.gz
+  md5: 5252b8abf20c96b79d023cc7c38270a5
   patches:
    # List any patch files here
    - build.patch
