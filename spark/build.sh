@@ -9,7 +9,7 @@ export LDFLAGS="-L${PREFIX}/lib"
 
 export SCALA_HOME="${PREFIX}/share/scala"
 
-export SPARK_HADOOP_VERSION="2.4.0"
+export SPARK_HADOOP_VERSION="2.3.0"
 
 # INFO:
 # - https://cwiki.apache.org/confluence/display/MAVEN/OutOfMemoryError

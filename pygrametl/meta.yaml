@@ -1,11 +1,11 @@
 package:
-  name: petl
-  version: !!str 1.0.10
+  name: pygrametl
+  version: "2.3.2"
 
 source:
-  fn: petl-1.0.10.tar.gz
-  url: https://pypi.python.org/packages/source/p/petl/petl-1.0.10.tar.gz
-  md5: e4f00e2184d8c9f75cc225c28d9d20a5
+  fn: pygrametl-2.3.2.tar.gz
+  url: https://pypi.python.org/packages/source/p/pygrametl/pygrametl-2.3.2.tar.gz
+  md5: 3248f5a9830cf37f639ae27c47740bf6
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -16,9 +16,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - petl = petl:main
+    # - pygrametl = pygrametl:main
     #
-    # Would create an entry point called petl that calls petl.main()
+    # Would create an entry point called pygrametl that calls pygrametl.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -35,14 +35,7 @@ requirements:
 test:
   # Python imports
   imports:
-    - petl
-    - petl.io
-    - petl.test
-    - petl.test.io
-    - petl.test.transform
-    - petl.test.util
-    - petl.transform
-    - petl.util
+    - pygrametl
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -57,9 +50,9 @@ test:
     # - nose
 
 about:
-  home: https://github.com/alimanfoo/petl
-  license: MIT License
-  summary: 'A Python package for extracting, transforming and loading tables of data.'
+  home: http://pygrametl.org/
+  license: BSD License
+  summary: 'ETL programming in Python'
 
 # See
 # http://docs.continuum.io/conda/build.html for

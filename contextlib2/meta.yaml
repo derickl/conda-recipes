@@ -1,11 +1,11 @@
 package:
-  name: petl
-  version: !!str 1.0.10
+  name: contextlib2
+  version: "0.4.0"
 
 source:
-  fn: petl-1.0.10.tar.gz
-  url: https://pypi.python.org/packages/source/p/petl/petl-1.0.10.tar.gz
-  md5: e4f00e2184d8c9f75cc225c28d9d20a5
+  fn: contextlib2-0.4.0.tar.gz
+  url: https://pypi.python.org/packages/source/c/contextlib2/contextlib2-0.4.0.tar.gz
+  md5: ea687207db25f65552061db4a2c6727d
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -16,9 +16,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - petl = petl:main
+    # - contextlib2 = contextlib2:main
     #
-    # Would create an entry point called petl that calls petl.main()
+    # Would create an entry point called contextlib2 that calls contextlib2.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -35,14 +35,7 @@ requirements:
 test:
   # Python imports
   imports:
-    - petl
-    - petl.io
-    - petl.test
-    - petl.test.io
-    - petl.test.transform
-    - petl.test.util
-    - petl.transform
-    - petl.util
+    - contextlib2
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -57,9 +50,9 @@ test:
     # - nose
 
 about:
-  home: https://github.com/alimanfoo/petl
-  license: MIT License
-  summary: 'A Python package for extracting, transforming and loading tables of data.'
+  home: http://contextlib2.readthedocs.org
+  license: PSF License
+  summary: 'Backports and enhancements for the contextlib module'
 
 # See
 # http://docs.continuum.io/conda/build.html for

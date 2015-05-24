@@ -1,0 +1,38 @@
+package:
+  name: petlx
+  version: !!str 1.0.3
+
+source:
+  fn: petlx-1.0.3.tar.gz
+  url: https://github.com/alimanfoo/petlx/archive/v1.0.3.tar.gz
+  md5: 8684df0d0eaad4fbc9e145b1ad8fc422
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+
+requirements:
+  build:
+    - python
+    - petl
+
+  run:
+    - python
+    - petl
+
+test:
+  # Python imports
+  imports:
+    - petlx
+    - petlx.test
+    - petlx.bio
+    - petlx.test.bio
+
+about:
+  home: https://github.com/alimanfoo/petlx
+  license: MIT License
+  summary: 'A Python package for extracting, transforming and loading tables of data.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

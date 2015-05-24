@@ -1,11 +1,11 @@
 package:
   name: snap
-  version: 1.1
+  version: 1.2
 
 source:
-  fn: snap-1.1-2.3-macosx10.7.5-x64-py2.7.tar
-  url: http://snap.stanford.edu/snappy/release/snap-1.1-2.3-macosx10.7.5-x64-py2.7.tar.gz
-  md5: 508bedd96d564af2eb3fb4585e4e4fe0
+  fn: snap-1.2-2.4-macosx10.7.5-x64-py2.7.tar.gz
+  url: http://snap.stanford.edu/snappy/release/snap-1.2-2.4-macosx10.7.5-x64-py2.7.tar.gz
+  md5: 2de6a62580ab6c3f86adb859aef371b1
 #  patches:
    # List any patch files here
    # - fix.patch

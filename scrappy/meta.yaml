@@ -1,12 +1,12 @@
 
 package:
     name: scrapy
-    version: !!str 0.2.44
+    version: !!str 0.24.6
 
 source:
-    fn: scrapy-0.2.44.tar.gz
-    url: https://github.com/scrapy/scrapy/archive/0.24.4.tar.gz
-    md5: e15f4ca2c6d13467225b20699338ccab
+    fn: scrapy-0.24.6.tar.gz
+    url: https://github.com/scrapy/scrapy/archive/0.24.6.tar.gz
+    md5: c4fc7af73e3cafc8000c2a02c5925fb0
 
 build:
     number: 0

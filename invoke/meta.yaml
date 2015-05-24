@@ -1,25 +1,27 @@
 package:
-  name: petl
-  version: !!str 1.0.10
+  name: invoke
+  version: "0.10.1"
 
 source:
-  fn: petl-1.0.10.tar.gz
-  url: https://pypi.python.org/packages/source/p/petl/petl-1.0.10.tar.gz
-  md5: e4f00e2184d8c9f75cc225c28d9d20a5
+  fn: invoke-0.10.1.tar.gz
+  url: https://pypi.python.org/packages/source/i/invoke/invoke-0.10.1.tar.gz
+  md5: 68b5858e2d03e2df00c35d3ae843b45e
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # preserve_egg_dir: True
-  # entry_points:
+  entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - petl = petl:main
+    # - invoke = invoke:main
     #
-    # Would create an entry point called petl that calls petl.main()
+    # Would create an entry point called invoke that calls invoke.main()
 
+    - invoke = invoke.cli:main
+    - inv = invoke.cli:main
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
@@ -28,6 +30,7 @@ source:
 requirements:
   build:
     - python
+    - setuptools
 
   run:
     - python
@@ -35,19 +38,19 @@ requirements:
 test:
   # Python imports
   imports:
-    - petl
-    - petl.io
-    - petl.test
-    - petl.test.io
-    - petl.test.transform
-    - petl.test.util
-    - petl.transform
-    - petl.util
+    - invoke
+    - invoke.parser
+    - invoke.vendor
+    - invoke.vendor.fluidity
+    - invoke.vendor.lexicon
+    - invoke.vendor.yaml2
 
-  # commands:
+  commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
 
+    - invoke --help
+    - inv --help
 
   # You can also put a file called run_test.py in the recipe that will be run
   # at test time.
@@ -57,9 +60,9 @@ test:
     # - nose
 
 about:
-  home: https://github.com/alimanfoo/petl
-  license: MIT License
-  summary: 'A Python package for extracting, transforming and loading tables of data.'
+  home: http://docs.pyinvoke.org
+  license: BSD License
+  summary: 'Pythonic task execution'
 
 # See
 # http://docs.continuum.io/conda/build.html for
