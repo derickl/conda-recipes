@@ -32,17 +32,6 @@ build:
 requirements:
   build:
     - python
-<<<<<<< HEAD
-    - tornado
-
-    # requirements.
-    #
-    # - setuptools
-
-  run:
-    - python
-    - tornado
-=======
     - setuptools
     - cached-property
     - pyparsing
@@ -55,7 +44,6 @@ requirements:
     - pyparsing
     - tornado
     - python-daemon
->>>>>>> 442297313f46c04fbd8ff835d8e4acf2cbab0302
 
 test:
   # Python imports
