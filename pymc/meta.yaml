@@ -1,20 +1,20 @@
 package:
   name: pymc
-  version: 2.3.3
+  version: 2.3.4
 
 source:
-  fn:  pymc-2.3.3.tar.gz
-  url: https://pypi.python.org/packages/source/p/pymc/pymc-2.3.3.tar.gz
-  md5: 99645bf558a41376be0e687ccf90a39f
+  fn:  pymc-2.3.4.tar.gz
+  url: https://pypi.python.org/packages/source/p/pymc/pymc-2.3.4.tar.gz
+  md5: b9bb3eb4f81df6c7d49c0a9a0cee81bc
 
 build:
-  number: 3
+  number: 0
 
 requirements:
   build:
     - python
     - numpy
-    - gcc
+    - gcc [not unix]
 
   run:
     - python
