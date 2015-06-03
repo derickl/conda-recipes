@@ -19,7 +19,7 @@ source:
 build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 1 # [osx]
+  number: 2 # [osx]
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -30,11 +30,9 @@ build:
 requirements:
   build:
     - r-base >=3.0.0
-    - r-lattice # [not win]
 
   run:
     - r >=3.0.0
-    - r-lattice # [not win]
 
 test:
   commands:
