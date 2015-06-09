@@ -1,11 +1,11 @@
 package:
   name: rodeo
-  version: "0.2.2"
+  version: "0.4.1"
 
 source:
-  fn: rodeo-0.2.2.tar.gz
-  url: https://pypi.python.org/packages/source/r/rodeo/rodeo-0.2.2.tar.gz
-  md5: b5e5e1877e68c2d435de655567548580
+  fn: rodeo-0.4.1.tar.gz
+  url: https://pypi.python.org/packages/source/r/rodeo/rodeo-0.4.1.tar.gz
+  md5: 33979e3f14445c9c32bbb169cff51495
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -32,18 +32,21 @@ requirements:
     - setuptools
     - ipython >=3.0.0
     - flask >=0.10.1
-    - jedi
     - docopt
     - pyzmq >=13
+    - docopt
+    - mistune
 
   run:
     - python
     - ipython >=3.0.0
     - flask >=0.10.1
     - jedi
-    - docopt
     - pyzmq >=13
     - pip
+    - docopt
+    - mistune
+    
 
 test:
   # Python imports
