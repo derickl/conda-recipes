@@ -1,12 +1,12 @@
 
 package:
-    name: scrapy
-    version: !!str 0.24.6
+    name: scrappy
+    version: 0.2.10-beta-11
 
 source:
-    fn: scrapy-0.24.6.tar.gz
-    url: https://github.com/scrapy/scrapy/archive/0.24.6.tar.gz
-    md5: c4fc7af73e3cafc8000c2a02c5925fb0
+    fn: Scrappy-0.2.10.beta.11.tar.gz
+    url: https://pypi.python.org/packages/source/S/Scrappy/Scrappy-0.2.10.beta.11.tar.gz
+    md5: 5cbe9b2fac5a7f167001042875aa7cab
 
 build:
     number: 0
@@ -14,29 +14,16 @@ build:
 requirements:
     build:
         - python
-        - setuptools
-        - twisted >=10.0.0
-        - lxml
-        - pyopenssl
-        - cssselect >=0.9
-        - w3lib >=1.8.0
-        - queuelib
-        - six >=1.5.2
+        - distribute
 
     run:
         - python
-        - setuptools
-        - twisted >=10.0.0
-        - lxml
-        - pyopenssl
-        - cssselect >=0.9
-        - w3lib >=1.8.0
-        - queuelib
-        - six >=1.5.2
+        - nose
+        - guessit
 
 test:
     imports:
-        - scrapy
+        - scrappy
 
     commands:
         #- nosetests -w tests/
