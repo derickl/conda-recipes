@@ -1,0 +1,51 @@
+package:
+  name: dato-predictive-service-client
+  version: "1.0.0"
+
+source:
+  fn: dato-predictive-service-client-1.0.0.tar.gz
+  url: https://pypi.python.org/packages/source/d/dato-predictive-service-client/dato-predictive-service-client-1.0.0.tar.gz
+  md5: 82022f1e0b91aef55b5abc2efbb2960c
+  patches:
+   # List any patch files here
+    - build.patch
+
+build:
+   number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - requests >=2.3.0
+
+  run:
+    - python
+    - requests >=2.3.0
+
+test:
+  # Python imports
+  imports:
+    - dato
+    - dato.deploy
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/dato-code/Dato-Predictive-Service-Client-Python
+  license: BSD License
+  summary: 'Dato Predictive Service Client makes it easy to make REST API calls to Dato Predictive Services'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

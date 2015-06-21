@@ -1,8 +1,8 @@
-diff --git a/setup.py b/setup.py
-index fc93f66..8a3cb4f 100644
+diff --git setup.py setup.py
+index 622b2e8..9abb297 100644
 --- setup.py
 +++ setup.py
-@@ -39,6 +39,6 @@ if __name__ == '__main__':
+@@ -60,6 +60,6 @@ if __name__ == '__main__':
              "Topic :: Scientific/Engineering :: Information Analysis",
          ],
          install_requires=[

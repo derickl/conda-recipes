@@ -1,14 +1,14 @@
 package:
-  name: graphlab-service-client
-  version: !!str 1.3.0
+  name: momoko
+  version: "2.0.0"
 
 source:
-  fn: GraphLab-Service-Client-1.3.0.tar.gz
-  url: https://pypi.python.org/packages/source/G/GraphLab-Service-Client/GraphLab-Service-Client-1.3.0.tar.gz
-  md5: 5252b8abf20c96b79d023cc7c38270a5
-  patches:
+  fn: Momoko-2.0.0.tar.gz
+  url: https://pypi.python.org/packages/source/M/Momoko/Momoko-2.0.0.tar.gz
+  md5: 0ea57e086c142c6104b17a24bcabdb1b
+#  patches:
    # List any patch files here
-   - build.patch
+   # - fix.patch
 
 # build:
   # preserve_egg_dir: True
@@ -16,9 +16,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - graphlab-service-client = graphlab-service-client:main
+    # - momoko = momoko:main
     #
-    # Would create an entry point called graphlab-service-client that calls graphlab-service-client.main()
+    # Would create an entry point called momoko that calls momoko.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -29,16 +29,18 @@ requirements:
   build:
     - python
     - setuptools
-    - requests >=2.3.0
+    - tornado >=4.0
+    - psycopg2
 
   run:
     - python
-    - requests >=2.3.0
+    - tornado >=4.0
+    - psycopg2
 
 test:
   # Python imports
   imports:
-    - graphlab_service_client
+    - momoko
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -53,9 +55,9 @@ test:
     # - nose
 
 about:
-  home: http://graphlab.com
-  license: BSD License
-  summary: 'GraphLab Service Client makes it easy to make REST API calls to GraphLab Predictive Services'
+  home: http://momoko.61924.nl/
+  license: MIT License
+  summary: "Momoko wraps Psycopg2's functionality for use in Tornado."
 
 # See
 # http://docs.continuum.io/conda/build.html for

@@ -1,11 +1,11 @@
 package:
   name: rodeo
-  version: "0.4.1"
+  version: "0.4.3"
 
 source:
-  fn: rodeo-0.4.1.tar.gz
-  url: https://pypi.python.org/packages/source/r/rodeo/rodeo-0.4.1.tar.gz
-  md5: 33979e3f14445c9c32bbb169cff51495
+  fn: rodeo-0.4.3.tar.gz
+  url: https://pypi.python.org/packages/source/r/rodeo/rodeo-0.4.3.tar.gz
+  md5: 5101ba4098cac18d0f31e2085850b12f
 #  patches:
    # List any patch files here
    # - fix.patch
