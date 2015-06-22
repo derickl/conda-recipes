@@ -1,0 +1,90 @@
+package:
+  name: py2neo
+  version: "2.0.7"
+
+source:
+  fn: py2neo-2.0.7.tar.gz
+  url: https://pypi.python.org/packages/source/p/py2neo/py2neo-2.0.7.tar.gz
+  md5: 51413c6b62f1afbb1925bb8226b0969d
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - py2neo = py2neo:main
+    #
+    # Would create an entry point called py2neo that calls py2neo.main()
+
+    - cypher = py2neo.cypher.__main__:main
+    - neoauth = py2neo.password:main
+    - neoget = py2neo.server:main
+    - geoff = py2neo.ext.geoff.__main__:main
+    - neobox = py2neo.ext.neobox.__main__:main
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+    - shapely
+
+test:
+  # Python imports
+  imports:
+    - py2neo
+    - py2neo.batch
+    - py2neo.cypher
+    - py2neo.cypher.error
+    - py2neo.ext
+    - py2neo.ext.calendar
+    - py2neo.ext.geoff
+    - py2neo.ext.gremlin
+    - py2neo.ext.neobox
+    - py2neo.ext.ogm
+    - py2neo.ext.spatial
+    - py2neo.ext.spatial.scripts
+    - py2neo.legacy
+    - py2neo.packages
+    - py2neo.packages.httpstream
+    - py2neo.packages.httpstream.packages
+    - py2neo.packages.httpstream.packages.urimagic
+    - py2neo.packages.jsonstream
+    - py2neo.packages.tart
+
+  commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+    - cypher --help
+    - neoauth --help
+    - neoget --help
+    #- geoff --help
+    #- neobox --help
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://py2neo.org/
+  license: Apache Software License
+  summary: 'Python client library and toolkit for Neo4j'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
