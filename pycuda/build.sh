@@ -18,7 +18,7 @@ export CXXFLAGS="${CFLAGS}"
 
 touch requirements.txt;
 
-${PYTHON} configure.py;
+${PYTHON} configure.py --cuda-root=/usr/local/cuda/;
 ${PYTHON} setup.py install;
 
 mkdir -vp ${PREFIX}/bin;

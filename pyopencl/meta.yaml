@@ -1,16 +1,17 @@
 package:
   name: pyopencl
-  version: !!str 2014.1
+  version: "2015.1"
 
 source:
-  fn: pyopencl-2014.1.tar.gz
-  url: https://pypi.python.org/packages/source/p/pyopencl/pyopencl-2014.1.tar.gz
-  md5: f89d26676aaff01312116caea114f06c
+  fn: pyopencl-2015.1.tar.gz
+  url: https://pypi.python.org/packages/source/p/pyopencl/pyopencl-2015.1.tar.gz
+  md5: c7b9dd0bb113ad852dae6fdadd417899
 #  patches:
    # List any patch files here
    # - fix.patch
 
 # build:
+  # noarch_python: True
   # preserve_egg_dir: True
   # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
@@ -29,19 +30,21 @@ requirements:
   build:
     - python
     - setuptools
+    - numpy
     - pytools >=2014.2
     - pytest >=2
     - decorator >=3.2.0
+    - appdirs >=1.4.0
     - mako
-    - numpy
 
   run:
     - python
+    - numpy
     - pytools >=2014.2
     - pytest >=2
     - decorator >=3.2.0
+    - appdirs >=1.4.0
     - mako
-    - numpy
 
 test:
   # Python imports
