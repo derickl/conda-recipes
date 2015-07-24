@@ -1,11 +1,11 @@
 package:
   name: graphlab-create
-  version: !!str 1.4.1
+  version: !!str 1.5.1
 
 source:
-  fn: GraphLab-Create-1.4.1.tar.gz
-  url: https://pypi.python.org/packages/source/G/GraphLab-Create/GraphLab-Create-1.4.1.tar.gz
-  md5: 80089f8b5062bcc7516b2b2ee55e2320
+  fn: GraphLab-Create-1.5.1.tar.gz
+  url: https://pypi.python.org/packages/source/G/GraphLab-Create/GraphLab-Create-1.5.1.tar.gz
+  md5: e9c35628eba0921f1794102a9b711945
   #patches:
    # List any patch files here
     #- build.patch
@@ -46,6 +46,7 @@ requirements:
       - flask >=0.10.1
       - flask-restful >=0.3.0
       - sseclient >=0.0.8
+      - multipledispatch >=0.4.7
     
 
   run:
@@ -65,6 +66,8 @@ requirements:
     - flask >=0.10.1
     - flask-restful >=0.3.0
     - sseclient >=0.0.8
+    - multipledispatch >=0.4.7
+    
     
 test:
   # Python imports

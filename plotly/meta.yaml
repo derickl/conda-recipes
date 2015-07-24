@@ -1,11 +1,11 @@
 package:
   name: plotly
-  version: !!str 1.6.6
+  version: !!str 1.7.6
 
 source:
-  fn: plotly-1.6.6.tar.gz
-  url: https://pypi.python.org/packages/source/p/plotly/plotly-1.6.6.tar.gz
-  md5: 75bceb7f285aafbfe7d4a21ef0c77a80
+  fn: plotly-1.7.6.tar.gz
+  url: https://pypi.python.org/packages/source/p/plotly/plotly-1.7.6.tar.gz
+  md5: 074544b27dfed171480166a2f195a2bf
 #  patches:
    # List any patch files here
    # - fix.patch

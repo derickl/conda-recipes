@@ -1,0 +1,22 @@
+package:
+  name: trendvis
+  version: 0.2.1
+
+source:
+  fn: TrendVis-0.2.1.zip
+  url: https://pypi.python.org/packages/source/T/TrendVis/TrendVis-0.2.1.zip
+  md5: d956d5447ce39bb3e29e95ca644d5fde
+
+
+requirements:
+  build:
+    - matplotlib
+    - python
+  run:
+    - python
+    - matplotlib
+
+
+about:
+    home: https://github.com/matplotlib/trendvis
+    license: BSD

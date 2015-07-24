@@ -6,10 +6,10 @@ $PYTHON setup.py install
 
 # Add more build steps here, if they are necessary.
 
-for file in $PREFIX/lib/python$PY_VER/site-packages/graphlab/cython/cy*.so
-do
-  install_name_tool -change @rpath/libbase_dep.so @loader_path/libbase_dep.so $file
-done
+#for file in $PREFIX/lib/python$PY_VER/site-packages/graphlab/cython/cy*.so
+#do
+#  install_name_tool -change @rpath/libbase_dep.so @loader_path/libbase_dep.so $file
+#done
 
 rm -rf $PREFIX/lib/python$PY_VER/site-packages/graphlab/osx
 rm -rf $PREFIX/lib/python$PY_VER/site-packages/graphlab/linux
