@@ -1,11 +1,11 @@
 package:
-  name: yapsy
-  version: "1.11.223"
+  name: ws4py
+  version: "0.3.4"
 
 source:
-  fn: Yapsy-1.11.223.tar.gz
-  url: https://pypi.python.org/packages/source/Y/Yapsy/Yapsy-1.11.223.tar.gz
-  md5: d8b71cd35e6daa36ae83f76874f450aa
+  fn: ws4py-0.3.4.tar.gz
+  url: https://pypi.python.org/packages/source/w/ws4py/ws4py-0.3.4.tar.gz
+  md5: 6b47e33cbd13f5c134b04f2a44a480ad
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -17,9 +17,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - yapsy = yapsy:main
+    # - ws4py = ws4py:main
     #
-    # Would create an entry point called yapsy that calls yapsy.main()
+    # Would create an entry point called ws4py that calls ws4py.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -37,7 +37,9 @@ requirements:
 test:
   # Python imports
   imports:
-    - yapsy
+    - ws4py
+    - ws4py.client
+    - ws4py.server
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -52,9 +54,9 @@ test:
     # - nose
 
 about:
-  home: http://yapsy.sourceforge.net
+  home: https://github.com/Lawouach/WebSocket-for-Python
   license: BSD License
-  summary: 'Yet another plugin system'
+  summary: 'WebSocket client and server library for Python 2 and 3 as well as PyPy'
 
 # See
 # http://docs.continuum.io/conda/build.html for

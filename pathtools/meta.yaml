@@ -1,11 +1,11 @@
 package:
-  name: yapsy
-  version: "1.11.223"
+  name: pathtools
+  version: "0.1.2"
 
 source:
-  fn: Yapsy-1.11.223.tar.gz
-  url: https://pypi.python.org/packages/source/Y/Yapsy/Yapsy-1.11.223.tar.gz
-  md5: d8b71cd35e6daa36ae83f76874f450aa
+  fn: pathtools-0.1.2.tar.gz
+  url: https://pypi.python.org/packages/source/p/pathtools/pathtools-0.1.2.tar.gz
+  md5: 9a1af5c605768ea5804b03b734ff0f82
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -17,9 +17,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - yapsy = yapsy:main
+    # - pathtools = pathtools:main
     #
-    # Would create an entry point called yapsy that calls yapsy.main()
+    # Would create an entry point called pathtools that calls pathtools.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -37,7 +37,7 @@ requirements:
 test:
   # Python imports
   imports:
-    - yapsy
+    - pathtools
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -52,9 +52,9 @@ test:
     # - nose
 
 about:
-  home: http://yapsy.sourceforge.net
-  license: BSD License
-  summary: 'Yet another plugin system'
+  home: http://github.com/gorakhargosh/pathtools
+  license: MIT License
+  summary: 'File system general utilities'
 
 # See
 # http://docs.continuum.io/conda/build.html for
