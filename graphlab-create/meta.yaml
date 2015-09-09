@@ -1,32 +1,18 @@
 package:
   name: graphlab-create
-  version: !!str 1.5.1
+  version: !!str 1.5.2
 
 source:
-  fn: GraphLab-Create-1.5.1.tar.gz
-  url: https://pypi.python.org/packages/source/G/GraphLab-Create/GraphLab-Create-1.5.1.tar.gz
-  md5: e9c35628eba0921f1794102a9b711945
+  fn: GraphLab_Create-1.5.2-cp27-none-macosx_10_5_x86_64.macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl
+  url: https://pypi.python.org/packages/cp27/G/GraphLab-Create/GraphLab_Create-1.5.2-cp27-none-macosx_10_5_x86_64.macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl
+  md5: 601d0645a1f461e3b032a7fe5071c1fe
   #patches:
    # List any patch files here
     #- build.patch
 
 build:
-  # preserve_egg_dir: True
-  # entry_points:
-    # Put any entry points (scripts to be generated automatically) here. The
-    # syntax is module:function.  For example
-    #
-    # - graphlab-create = graphlab-create:main
-    #
-    # Would create an entry point called graphlab-create that calls graphlab-create.main()
-
-
-  # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
   number: 1
-  
-  # Hack to make it build
-  #binary_relocation: false
+
 
 requirements:
   build:
