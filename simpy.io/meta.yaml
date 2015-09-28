@@ -1,24 +1,25 @@
 package:
-  name: simpy
-  version: !!str 3.0.8
+  name: simpy.io
+  version: "0.2.2"
 
 source:
-  fn: simpy-3.0.8.tar.gz
-  url: https://pypi.python.org/packages/source/s/simpy/simpy-3.0.8.tar.gz
-  md5: 477552f5bf81d8d293b3e2bb8668e406
+  fn: simpy.io-0.2.2.tar.gz
+  url: https://pypi.python.org/packages/source/s/simpy.io/simpy.io-0.2.2.tar.gz
+  md5: 7474fcf0691562d6aeb874579b85690f
 #  patches:
    # List any patch files here
    # - fix.patch
 
 # build:
-  #preserve_egg_dir: True
-  #entry_points:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - simpy = simpy:main
+    # - simpy.io = simpy.io:main
     #
-    # Would create an entry point called simpy that calls simpy.main()
+    # Would create an entry point called simpy.io that calls simpy.io.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -29,18 +30,18 @@ requirements:
   build:
     - python
     - setuptools
+    - simpy >=3
 
   run:
     - python
+    - simpy >=3
 
 test:
   # Python imports
   imports:
-    - simpy
-    - simpy.resources
-    - simpy.test
+    - simpy.io
 
-  #commands:
+  # commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
 
@@ -53,9 +54,9 @@ test:
     # - nose
 
 about:
-  home: https://simpy.rtfd.org
-  license:  MIT License
-  summary: 'Event discrete, process based simulation for Python.'
+  home: https://bitbucket.org/simpy/simpy.io
+  license: MIT License
+  summary: 'Asynchronous networking based on SimPy.'
 
 # See
 # http://docs.continuum.io/conda/build.html for
