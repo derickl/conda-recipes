@@ -1,11 +1,10 @@
 package:
   name: metl
-  version: "1.0.6"
+  version: "1.0.7"
 
 source:
-  fn: mETL-1.0.6.tar.gz
-  url: https://pypi.python.org/packages/source/m/mETL/mETL-1.0.6.tar.gz
-  md5: 89c5d266a9489ad6b302c8e7a849df40
+  fn: mETL-1.0.7.tar.gz
+  url: https://github.com/ceumicrodata/mETL/archive/master.tar.gz
 #  patches:
    # List any patch files here
    # - fix.patch
