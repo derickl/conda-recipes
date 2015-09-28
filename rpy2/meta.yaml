@@ -1,45 +1,35 @@
 package:
   name: rpy2
-  version: !!str 2.5.6
+  version: "2.7.0"
 
 source:
-  fn: rpy2-2.5.6.tar.gz
-  url: https://pypi.python.org/packages/source/r/rpy2/rpy2-2.5.6.tar.gz
-  md5: a36e758b633ce6aec6a5f450bfee980f
+  fn: rpy2-2.7.0.tar.gz
+  url: https://pypi.python.org/packages/source/r/rpy2/rpy2-2.7.0.tar.gz
+  md5: afd9ea81a03640b60240b7d53518e652
+#  patches:
+   # List any patch files here
+   # - fix.patch
 
-<<<<<<< HEAD
-# build:
-  # preserve_egg_dir: True
-  # entry_points:
-    # Put any entry points (scripts to be generated automatically) here. The
-    # syntax is module:function.  For example
-    #
-    # - rpy2 = rpy2:main
-    #
-    # Would create an entry point called rpy2 that calls rpy2.main()
-
-
-  # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
-  # number: 1
-=======
 build:
   rpaths:
     - lib/R/lib/
     - lib/
->>>>>>> 6d195e29be1bb6ebdcbe952bee928023cabdeab2
 
 requirements:
   build:
     - python
+    - r
     - setuptools
-    - singledispatch
-    - ipython
+    - argparse # [py26]
+    - singledispatch # [not (py34 or py35)]
+    - six
 
   run:
     - python
-    - singledispatch
-    - ipython
+    - r
+    - argparse # [py26]
+    - singledispatch # [not (py34 or py35)]
+    - six
 
 test:
   # Python imports
@@ -58,30 +48,22 @@ test:
     - rpy2.robjects.lib.tests
     - rpy2.robjects.tests
 
-<<<<<<< HEAD
-  # commands:
-    # You can put test commands to be run here.  Use this to test that the
-    # entry points work.
-
-
-  # You can also put a file called run_test.py in the recipe that will be run
-  # at test time.
-
-  # requires:
-    # Put any additional test requirements here.  For example
-    # - nose
-=======
   commands:
-    - python -m rpy2.tests
+    - echo
+    # - python -m rpy2.tests
 
   requires:
     - ipython
     - r-survival
     - r-ggplot2
     - numpy
->>>>>>> 6d195e29be1bb6ebdcbe952bee928023cabdeab2
+    - pandas
 
 about:
   home: http://rpy.sourceforge.net
   license: GNU General Public License v2 or later (GPLv2+)
   summary: 'Python interface to the R language (embedded R)'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
