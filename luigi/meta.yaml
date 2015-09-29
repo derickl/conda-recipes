@@ -1,11 +1,11 @@
 package:
   name: luigi
-  version: "1.2.1"
+  version: "1.3.0"
 
 source:
-  fn: luigi-1.2.1.tar.gz
-  url: https://pypi.python.org/packages/source/l/luigi/luigi-1.2.1.tar.gz
-  md5: a147bba0bb1999b5856f4910bf15a9c0
+  fn: luigi-1.3.0.tar.gz
+  url: https://pypi.python.org/packages/source/l/luigi/luigi-1.3.0.tar.gz
+  md5: 948a6574e4d4e1d1d8b8a355ca0cdaf7
 #  patches:
    # List any patch files here
    # - fix.patch
