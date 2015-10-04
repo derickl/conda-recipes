@@ -12,7 +12,7 @@ source:
    # - prefix-erl.patch
     
 build:
-  number: 0
+  number: 2
 
 requirements:
   build:
@@ -30,6 +30,7 @@ requirements:
 test:
   imports:
     - disco
+    - discodb
 
 about:
   home: http://discoproject.org/

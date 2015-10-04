@@ -32,6 +32,12 @@ echo "#!/bin/bash" >> $PREFIX/bin/ddfs
 echo "PYTHONPATH=\"$PREFIX/lib/python$PY_VER/site-packages\" exec \"$PREFIX/libexec/bin/disco\" \"\$@\"" >> $PREFIX/bin/disco
 echo "PYTHONPATH=\"$PREFIX/lib/python$PY_VER/site-packages\" exec \"$PREFIX/libexec/bin/ddfs\" \"\$@\"" >> $PREFIX/bin/ddfs
 
-#cd contrib/discodb
+cd contrib/discodb
+git clone https://github.com/discoproject/discodb.git .
+gsed -i "s:prefix        = /usr/local:prefix = $PREFIX:g" Makefile
+
+cd python
+$PYTHON setup.py install
+
 
 #$PYTHON setup.py install --prefix=$PREFIX
