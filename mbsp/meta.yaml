@@ -1,0 +1,41 @@
+package:
+  name: mbsp
+  version: 1.4
+
+source:
+  fn: MBSP_1.4.zip
+  url: http://www.clips.ua.ac.be/media/MBSP_1.4.zip
+  md5: 97edaa1a34787a059c6b235ba9ce62b0
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - MBSP
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://www.clips.ua.ac.be/pages/MBSP
+  license: BSD License
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
