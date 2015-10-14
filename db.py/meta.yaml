@@ -1,11 +1,11 @@
 package:
   name: db.py
-  version: !!str 0.4.3
+  version: !!str 0.4.4
 
 source:
-  git_url: https://github.com/yhat/db.py.git
-  patches:
-    - build.patch
+  fn: db.py-0.4.4.tar.gz
+  url: https://pypi.python.org/packages/source/d/db.py/db.py-0.4.4.tar.gz
+  md5: 14e9dd4486443f8955a75e935136c48d
 
 requirements:
   build:
