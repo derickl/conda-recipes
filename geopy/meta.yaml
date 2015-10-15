@@ -1,62 +1,65 @@
 package:
-  name: tox
-  version: 2.1.1
+  name: geopy
+  version: "1.11.0"
 
 source:
-  fn: tox-2.1.1.tar.gz
-  url: https://pypi.python.org/packages/source/t/tox/tox-2.1.1.tar.gz
-  md5: fc5b38cce701ced90a89b9da24af1769
+  fn: geopy-1.11.0.tar.gz
+  url: https://pypi.python.org/packages/source/g/geopy/geopy-1.11.0.tar.gz
+  md5: b73445dc0069550bbd2b09162f7339b3
 #  patches:
    # List any patch files here
    # - fix.patch
 
-build:
-  entry_points:
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - tox = tox:main
+    # - geopy = geopy:main
     #
-    # Would create an entry point called tox that calls tox.main()
-    - tox = tox:cmdline
-    - tox-quickstart = tox._quickstart:main
+    # Would create an entry point called geopy that calls geopy.main()
+
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 1
+  # number: 1
 
 requirements:
   build:
     - python
-    - argparse [py26]
     - setuptools
-    - py
-    - virtualenv
-    - pluggy
 
   run:
     - python
-    - argparse [py26]
-    - py
-    - virtualenv
-    - pluggy
 
 test:
   # Python imports
   imports:
-    - tox
+    - geopy
+    - geopy.geocoders
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
 
 
   # You can also put a file called run_test.py in the recipe that will be run
   # at test time.
 
-  # requires:
+  requires:
+    - mock
+    - nose-cov
+    - pylint
+    - tox
     # Put any additional test requirements here.  For example
     # - nose
 
 about:
-  home: http://tox.testrun.org/
-  license: MIT
+  home: https://github.com/geopy/geopy
+  license: MIT License
+  summary: 'Python Geocoding Toolbox'
 
 # See
 # http://docs.continuum.io/conda/build.html for
