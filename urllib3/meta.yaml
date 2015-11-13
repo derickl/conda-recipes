@@ -1,11 +1,11 @@
 package:
   name: urllib3
-  version: 1.10.4
+  version: 1.12
 
 source:
-  fn: urllib3-1.10.4.tar.gz
-  url: https://pypi.python.org/packages/source/u/urllib3/urllib3-1.10.4.tar.gz
-  md5: 517e6c293e1d144ff3e67486d69249c6
+  fn: urllib3-1.12.tar.gz
+  url: https://pypi.python.org/packages/source/u/urllib3/urllib3-1.12.tar.gz
+  md5: befd9dbb2c373681bd88710ba96abbdb
 #  patches:
    # List any patch files here
    # - fix.patch
