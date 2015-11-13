@@ -7,23 +7,36 @@ source:
   fn:  vtk-6.3.0.tar.gz
   patches:
     - dlls.patch                              [win]
+    - apple.patch                             [osx]
 
 build:
+  number: 1
   has_prefix_files:                           [win]
     - Lib/site-packages/vtk/__init__.py       [win]
 
 requirements:
   build:
     - cmake
-    - python    <3
-    - mesa      [linux]
+    - python
   run:
-    - python    <3
-    - mesa      [linux]
+    - python
 
 test:
   imports:
     - vtk
+    - vtk.vtkChartsCore
+    - vtk.vtkCommonCore
+    - vtk.vtkFiltersCore
+    - vtk.vtkFiltersGeneric
+    - vtk.vtkGeovisCore
+    - vtk.vtkFiltersHybrid
+    - vtk.vtkIOCore
+    - vtk.vtkImagingCore
+    - vtk.vtkInfovisCore
+    - vtk.vtkRenderingCore
+    - vtk.vtkViewsCore
+    - vtk.vtkRenderingVolume
+    - vtk.vtkInteractionWidgets
 
 about:
   home: http://www.vtk.org/
