@@ -1,11 +1,11 @@
 package:
   name: jmespath
-  version: !!str 0.5.0
+  version: "0.7.1"
 
 source:
-  fn: jmespath-0.5.0.tar.gz
-  url: https://pypi.python.org/packages/source/j/jmespath/jmespath-0.5.0.tar.gz
-  md5: 55da4a6944a337b95b42207b343e18de
+  fn: jmespath-0.7.1.tar.gz
+  url: https://pypi.python.org/packages/source/j/jmespath/jmespath-0.7.1.tar.gz
+  md5: ca76cb014165306c1eded212cfb78cf5
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -51,7 +51,7 @@ test:
     # - nose
 
 about:
-  home: https://github.com/boto/jmespath
+  home: https://github.com/jmespath/jmespath.py
   license: MIT License
   summary: 'JSON Matching Expressions'
 

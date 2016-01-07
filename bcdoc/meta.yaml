@@ -1,11 +1,11 @@
 package:
   name: bcdoc
-  version: !!str 0.12.2
+  version: "0.16.0"
 
 source:
-  fn: bcdoc-0.12.2.tar.gz
-  url: https://pypi.python.org/packages/source/b/bcdoc/bcdoc-0.12.2.tar.gz
-  md5: 691b54985502d391f5e999aa476ab91b
+  fn: bcdoc-0.16.0.tar.gz
+  url: https://pypi.python.org/packages/source/b/bcdoc/bcdoc-0.16.0.tar.gz
+  md5: e84b506c1c73e71b23d9be0aa00f6bec
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -29,12 +29,12 @@ requirements:
   build:
     - python
     - setuptools
-    - six >=1.1.0
+    - six >=1.8.0,<2.0.0
     - docutils >=0.10
 
   run:
     - python
-    - six >=1.1.0
+    - six >=1.8.0,<2.0.0
     - docutils >=0.10
 
 test:

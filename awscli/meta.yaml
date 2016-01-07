@@ -1,14 +1,14 @@
 package:
   name: awscli
-  version: !!str 1.6.10
+  version: "1.7.34"
 
 source:
-  fn: awscli-1.6.10.tar.gz
-  url: https://pypi.python.org/packages/source/a/awscli/awscli-1.6.10.tar.gz
-  md5: a6922fe71407f132d8d709f2842de71a
-  patches:
+  fn: awscli-1.7.34.tar.gz
+  url: https://pypi.python.org/packages/source/a/awscli/awscli-1.7.34.tar.gz
+  md5: 4328f9565c43be51d049b6cd097c7988
+#  patches:
    # List any patch files here
-    - build.patch
+   # - fix.patch
 
 # build:
   # preserve_egg_dir: True
@@ -29,25 +29,26 @@ requirements:
   build:
     - python
     - setuptools
-    - botocore >=0.80.0,<0.81.0
-    - bcdoc >=0.12.0,<0.13.0
-    - colorama >=0.2.5
+    - botocore ==1.0.0b3
+    - bcdoc >=0.16.0,<0.17.0
+    - colorama >=0.2.5,<=0.3.3
     - docutils >=0.10
-    - rsa >=3.1.2
+    - rsa >=3.1.2,<=3.1.4
 
   run:
     - python
-    - botocore >=0.80.0,<0.81.0
-    - bcdoc >=0.12.0,<0.13.0
-    - colorama >=0.2.5
+    - botocore ==1.0.0b3
+    - bcdoc >=0.16.0,<0.17.0
+    - colorama >=0.2.5,<=0.3.3
     - docutils >=0.10
-    - rsa >=3.1.2
+    - rsa >=3.1.2,<=3.1.4
 
 test:
   # Python imports
   imports:
     - awscli
     - awscli.customizations
+    - awscli.customizations.codedeploy
     - awscli.customizations.configservice
     - awscli.customizations.datapipeline
     - awscli.customizations.emr

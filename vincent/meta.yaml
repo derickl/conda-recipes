@@ -1,6 +1,6 @@
 package:
   name: vincent
-  version: !!str 0.4.4
+  version: "0.4.4"
 
 source:
   fn: vincent-0.4.4.tar.gz
@@ -11,6 +11,7 @@ source:
    # - fix.patch
 
 # build:
+  # noarch_python: True
   # preserve_egg_dir: True
   # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
