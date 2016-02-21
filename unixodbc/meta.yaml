@@ -1,11 +1,11 @@
 package:
   name: unixodbc
-  version: 2.3.2
+  version: 2.3.4
 
 source:
-  fn: unixODBC-2.3.2.tar.gz
-  md5: 5e4528851eda5d3d4aed249b669bd05b
-  url: ftp://ftp.unixodbc.org/pub/unixODBC/unixODBC-2.3.2.tar.gz
+  fn: unixODBC-2.3.4.tar.gz
+  md5: bd25d261ca1808c947cb687e2034be81
+  url: ftp://ftp.unixodbc.org/pub/unixODBC/unixODBC-2.3.4.tar.gz
 
 
 about:

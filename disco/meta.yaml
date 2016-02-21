@@ -8,11 +8,9 @@ source:
   sha1: 43bc8fac5d5d657a81a8d7b628d1f72f97470b6e
   patches:
     - build.patch
-   #  - no-listdir.patch
-   # - prefix-erl.patch
     
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:

@@ -38,6 +38,3 @@ gsed -i "s:prefix        = /usr/local:prefix = $PREFIX:g" Makefile
 
 cd python
 $PYTHON setup.py install
-
-
-#$PYTHON setup.py install --prefix=$PREFIX
