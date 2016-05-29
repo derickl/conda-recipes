@@ -11,18 +11,24 @@ source:
     - qmake-arch.patch                 [osx]
     - ubuntu_disable_scrollbars.patch  [linux]
 
+build:
+  number: 1 [linux32]
+  number: 2 [linux64 or osx]
+
 requirements:
   build:
     - freetype    >=2.5.2    [unix]
     - fontconfig  >=2.11.1   [linux]
     - openssl
     - libpng      1.6*
+    - zlib
 
   run:
     - freetype    >=2.5.2    [unix]
     - fontconfig  >=2.11.1   [linux]
     - openssl
     - libpng      1.6*
+    - zlib
 
 about:
     home: http://qt-project.org
