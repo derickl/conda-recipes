@@ -1,11 +1,11 @@
 package:
   name: phonenumbers
-  version: "7.2.3"
+  version: "7.4.1"
 
 source:
-  fn: phonenumbers-7.2.3.tar.gz
-  url: https://pypi.python.org/packages/source/p/phonenumbers/phonenumbers-7.2.3.tar.gz
-  md5: b5b4093d1d579eb54bfaed5a2963c2b4
+  fn: phonenumbers-7.4.1.tar.gz
+  url: https://github.com/daviddrysdale/python-phonenumbers/archive/release-7.4.1.tar.gz
+  md5: 81d433ec313887f47daaa8652371193e
 #  patches:
    # List any patch files here
    # - fix.patch
